@@ -1,0 +1,15 @@
+{
+  "name": "sumsi-challenge-ahs",
+  "version": "1.0.0",
+  "description": "challenge 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.tailored-apps.com:coding-school/ss2022/webdevelopment/sumsi-challenge-ahs.git"
+  },
+  "author": "Reza",
+  "license": "ISC"
+}
