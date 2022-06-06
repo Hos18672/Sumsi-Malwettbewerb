@@ -114,6 +114,7 @@
                 font-size: 1.1rem;
                 font-family: $font-main;
                 padding: 0.3rem;
+                border-radius: 1rem ;
 
                 &:hover:not(.change-language){
                    outline: 2px dotted $color-bank-yellow;
@@ -135,6 +136,10 @@
 
                 @media screen and (max-width: 1279px) {
                     margin-bottom: 2.5rem;
+                }
+
+                @media screen and (max-width: 434px) {
+                    font-size: 1rem;
                 }
 
             }
