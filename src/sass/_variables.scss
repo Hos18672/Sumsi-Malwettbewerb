@@ -1,0 +1,39 @@
+/*---------------------------------------------------------------------------
+Font
+---------------------------*/
+
+@font-face {
+    font-family: raiffeisen;
+    src: 
+        url(../../src/font/swz721b-webfont.woff),
+        url(../../src/font/swz721b-webfont.woff2);
+}
+
+@font-face {
+    font-family: main-font;
+    src: 
+        url(../../src/font/roboto-regular-webfont.woff),
+        url(../../src/font/roboto-regular-webfont.woff2);
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------
+Variables
+-----------------------*/
+
+
+
+// font
+
+    $font-raiffeisen: raiffeisen, sans-serif;
+    $font-main: main-font, sans-serif;
+
+
+
+
+// color
+
+    $color-bank-yellow: #FFEC00;
