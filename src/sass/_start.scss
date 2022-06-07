@@ -1,0 +1,205 @@
+
+body{
+    margin: 0;
+    padding:0;
+}
+main{
+    overflow:hidden;
+    font-family:  $font-main;
+    margin: 0;
+    padding:0;
+}
+section{
+    height:100vh;
+}
+.start-container{
+    @include flex-right-row;
+    @include setBackground(url(../../pictures/fotos/child-background.jpg), cover, bottom );
+    &_logo-cool{
+        height: 200px;
+        width: 550px;
+        @media screen and (max-width:$Tablet-size){
+            height: 120px;
+            width: 370px;
+
+        }
+        @media screen and (max-width: $Smartphone-size){
+            height: 100px;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: 10px;
+            transform: rotate(-10deg);
+        }
+        
+    }
+
+    @media screen and (max-width: $Smartphone-size){
+        @include flex-left-row;
+    }
+
+}
+
+.welcome-container{
+    background-color: $color-bank-yellow;
+    @include flex-box(row,nowrap, center, center, center);
+
+    &_col-one{
+        padding:100px;
+        @media screen and (max-width:$Tablet-size){
+            display: none;
+        }
+        & img{
+            height: 20vw;
+            transition: .5s;
+        }
+
+    }
+    &_col-two{
+        @include flex-box(column,nowrap, center, left, center);
+        & h1{
+            max-width: 400px;
+            margin: 0 20px;
+            @media screen and (max-width:$Smartphone-size){
+                font-size: $font-size-20;
+            }
+        }
+        & img{
+            height: 25vw;
+            display: none;
+            transition: .5s;
+            margin-bottom: 30px;
+            @media screen and (max-width:$Tablet-size){
+                display: inline;
+            }
+        }
+        & p{
+            max-width: 600px;
+            font-size: $font-size-20;
+            padding: 20px;
+            @media screen and (max-width:$Smartphone-size){
+                font-size: $font-size-15;
+            }
+        }
+
+        @media screen and (max-width:$Tablet-size){
+            @include flex-box(column,nowrap, center, center, center);
+            text-align: center;
+        }
+    }
+}
+
+.info-container{
+    height: fit-content;
+    @include flex-box(row,nowrap, center, center, center);
+    & ul{
+        @include flex-box(column,nowrap, center, center, center);
+        text-align: center;
+        padding: 0 20px;
+        & h1{
+            max-width: 420px;
+
+            @media  only screen and (max-width: 600px){
+                font-size: $font-size-20;
+            }
+        }
+        & li{
+            padding: 0 10px;
+            text-align: left;
+            @include flex-box(row,nowrap, center, center, center);
+            max-width: 800px;
+            margin: 30px 0 ;
+            & img{
+                height:150px;
+                margin: 0 50px;
+            }
+            & .description-container{
+                padding: 0 10px;
+                min-height: 130px;
+                height: fit-content;
+                & h1{
+                    font-size: $font-size-18;
+                }
+                
+                @media  only screen and (max-width: 600px){
+                    font-size: $font-size-15;
+                }
+            
+            }
+
+            & .desc-one{
+                background-color: $color-red ;
+            }
+            & .desc-two{
+                background-color: $color-blue ;
+            } 
+                & .desc-three{
+                background-color: $color-bank-yellow ;
+            }    
+             & .desc-four{
+                background-color: $color-hell-green ;
+            }
+
+            @media  only screen and (max-width: 600px){
+                & .description-container{
+                    margin-top: 20px;
+                }
+                @include flex-box(column,nowrap, center, center, center);
+                & img{
+                    margin-bottom: 10px;
+                }
+                & .desc-two{
+                   transform: translateY(150px)
+                } 
+                & .img-two{
+                    transform: translateY(-170px)
+                }
+                & .desc-four{
+                    transform: translateY(130px)
+                 } 
+                 & .img-four{
+                     transform: translateY(-170px)
+                 }
+            }
+
+        }
+    }
+
+    @media  only screen and (max-width: $Tablet-size){
+        height: fit-content
+    }
+}
+
+.info-container-two{
+    background-color: $color-hell-gray;
+    @include flex-box(column,nowrap, center, center, center);
+    & img{
+       width:700px;
+    }
+    &_description-container{
+        background-color: $color-bank-yellow; 
+        padding: 20px;
+        font-size: $font-size-25;
+        & .info-two-list{
+        & li{
+            list-style: circle;
+        }
+        }
+    }
+}
+
+.upload-container{
+    @include flex-box(column,nowrap, center, center, center);
+    @include setBackground(url(../../pictures/fotos/colourful-pencils-background.jpg), cover, bottom );
+}
+
+.pictures-container{
+    @include flex-box(column,nowrap, center, center, center);
+    @include setBackground(url(../../pictures/fotos/robot-ge068a6770_1920.jpg), cover,  center);
+}
+footer{
+    @include flex-box(row,nowrap, space-between, center, center);
+    height:500px;
+    background-color: $color-bank-yellow;
+    margin: -20px 0;
+    padding: 20px;
+}
