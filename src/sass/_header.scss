@@ -91,6 +91,7 @@
         // @include testing-border;
         position: relative;
         z-index: 9;
+        padding-right: 1rem;
 
         @media screen and (max-width: 1279px) {
             width: 50vw;

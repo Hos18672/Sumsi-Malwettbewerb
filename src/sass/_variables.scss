@@ -16,6 +16,13 @@ Font
         url(../../src/font/roboto-regular-webfont.woff2);
 }
 
+@font-face {
+    font-family: indie;
+    src: 
+        url(../../src/font/indieflower-regular-webfont.woff),
+        url(../../src/font/indieflower-regular-webfont.woff2);
+}
+
 
 /* ---------------------------------------------------------------------------
 Variables
@@ -27,6 +34,7 @@ Variables
 
     $font-raiffeisen: raiffeisen, sans-serif;
     $font-main: main-font, sans-serif;
+    $font-second: indie, serif;
 
 
 // color

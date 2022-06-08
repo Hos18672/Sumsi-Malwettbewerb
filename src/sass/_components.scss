@@ -3,10 +3,9 @@
 Hamburger Menue
 
 -------------------------------------------------------------------------*/
-#hamburger-check:checked ~ .header_button {
+#hamburger-check:checked ~ .header_button{
     position: fixed;
 }
-
 
 #hamburger-check:checked ~ .header_button span{
     position: absolute;
