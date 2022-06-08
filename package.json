@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "built-main": "sass ./src/sass/main.scss ./public/css/main.css --style=compressed --watch"
+    "built-main": "sass ./src/sass/main.scss ./public/css/main.css --style=compressed --watch",
+    "built-gallery": "sass ./src/sass/gallery-collection.scss ./public/css/gallery.css --style=compressed --watch"
   },
   "repository": {
     "type": "git",
