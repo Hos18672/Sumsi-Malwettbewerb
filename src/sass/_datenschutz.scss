@@ -1,0 +1,12 @@
+
+.datenschutz-container{
+    background-color: $color-bank-yellow;
+    padding: 5% 10%;
+    height:fit-content;
+    & h1{
+        margin: 70px 0;
+    }
+}
+.footer{
+    border-top: 4px solid rgb(85, 85, 85);
+}
