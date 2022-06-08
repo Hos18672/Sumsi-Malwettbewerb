@@ -166,7 +166,7 @@ section{
 }
 
 .info-container-two{
-    min-height: fit-content;
+    height: fit-content;
     background-color: $color-hell-gray;
     padding-bottom: 40px;
     @include flex-box(column,nowrap, center, center, center);
