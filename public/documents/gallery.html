@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raiffeisen Sumsi Malwettbewerb - Gallerie</title>
     <meta name="description" content="Bildergallerie des Raiffeisen Sumsi Malwettbewerb">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gallery.css">
 
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="icon" type="image/png" href="../logo-32.png" sizes="32x32">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-for-all">
     
         <header class="header">
             <a href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
@@ -41,24 +41,17 @@
                         <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
                     </li>
                     <li>
-                        <a href="#" class="navi-link german">Bilder hochladen</a>
+                        <a href="#" class="navi-link german" target="_blank">Bilder hochladen</a>
                     </li>
                     <li>
-                        <a href="#" class="navi-link english" lang="en">Picture Upload</a>
+                        <a href="#" class="navi-link english" lang="en" target="_blank">Picture Upload</a>
                     </li>
                     
                     <li>
-                        <a href="#" class="navi-link german">Gallerie</a>
+                        <a href="#" class="navi-link german" target="_blank">Kontakt</a>
                     </li>
                     <li>
-                        <a href="#" class="navi-link english" lang="en">Gallery</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="navi-link german">Kontakt</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navi-link english" lang="en">Contact</a>
+                        <a href="#" class="navi-link english" lang="en" target="_blank">Contact</a>
                     </li>
                     
                     <li>
@@ -66,16 +59,178 @@
                     </li>
                     <li>
                         <span class="navi-link english change-language" lang="de">Deutsch</span>
-                    </li>   
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img src="../pics/icon_home.webp" alt="Home Icon" class="home-button">
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <p class="test"> this is a test</p>
+            <div class="container-gallery">
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Alexander-6-2.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>
+                            Alexander,
+                            <br class="hidden-break"> 
+                            <span class="years german">6 Jahre alt</span>
+                            <span class="years english">6 years old</span>
+                        </figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                        <!-- <p>
+                            <span></span>
+                            Sie haben bereits 5 Stimmen abgegeben
+                        </p> -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Mia-7.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> <span class="years"> 6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-filled.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Niklas-6-768x1024.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break">  <span class="years">6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-filled.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Silian-5.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Ariana-5-1-1024x714.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Elina-4.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-filled.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Hanna-3-2.jpeg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-filled.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Lisa-5.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-filled.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Alexander-6-2.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Mia-7.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Niklas-6-768x1024.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card_figure">
+                        <img src="../../pictures/for-testing/Silian-5.jpg" alt="ein gemaltes Bild" class="card_figure_image">
+                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
+                    </figure>
+
+                    <div class="card_rating">
+                        <img src="../pics/star-empty.webp" alt="rating star">
+                        <span>4</span>
+                    </div>
+                </div>
+
+
+            </div><!-- ende container gallery-->
         </main>
 
-    </div><!-- ende container-->
+    </div><!-- ende container for all-->
 
     <script src="../../src/js/change-language.js">   
     </script>
