@@ -1,4 +1,3 @@
-
 body{
     margin: 0;
     padding:0;
@@ -21,7 +20,6 @@ section{
         @media screen and (max-width:$Tablet-size){
             height: 120px;
             width: 370px;
-
         }
         @media screen and (max-width: $Smartphone-size){
             height: 100px;
@@ -30,13 +28,11 @@ section{
             margin-left: 10px;
             transform: rotate(-10deg);
         }
-        
     }
 
     @media screen and (max-width: $Smartphone-size){
         @include flex-left-row;
     }
-
 }
 
 .welcome-container{
@@ -170,36 +166,178 @@ section{
 }
 
 .info-container-two{
+    min-height: fit-content;
     background-color: $color-hell-gray;
+    padding-bottom: 40px;
     @include flex-box(column,nowrap, center, center, center);
     & img{
-       width:700px;
+       width:600px;
+       margin: 60px 10px;
+       
+        @media screen and (max-width:$Tablet-size){
+            width:400px;
+        
+        }
+        @media screen and (max-width:$Smartphone-size){
+            width:300px;
+        }
     }
     &_description-container{
         background-color: $color-bank-yellow; 
-        padding: 20px;
+        margin: 20px;
+        padding: 50px;
         font-size: $font-size-25;
+        border-radius: 30px;
+  
         & .info-two-list{
-        & li{
-            list-style: circle;
+            & li{
+                margin-left: 30px;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    margin-left: -30px;
+                    margin-top: 10px;
+                    border-radius: 50%;
+                    background-color:black;
+                }
+            }
         }
+
+        @media screen and (max-width:$Tablet-size){
+            font-size: $font-size-20;
+        }
+        @media screen and (max-width:$Smartphone-size){
+            font-size: $font-size-15;
         }
     }
 }
 
 .upload-container{
-    @include flex-box(column,nowrap, center, center, center);
+    @include flex-box(column,nowrap, center, left, center);
     @include setBackground(url(../../pictures/fotos/colourful-pencils-background.jpg), cover, bottom );
+     
+    & button{
+        border-style: none;
+        height: 60px;
+        width: 350px;
+        color: $color-white;
+        font-size: $font-size-20;
+        background-color: $color-red;
+        border-radius: 10px;
+        margin-left: 10%;
+        margin-top: 200px;
+
+        @media screen and (max-width:$Tablet-size){
+            margin-top: 200px;
+        
+        }
+        @media screen and (max-width:$Smartphone-size){
+            margin-top: 200px;
+            height: 50px;
+            width: 300px;
+            font-size: $font-size-18;
+        }
+    }
 }
 
 .pictures-container{
     @include flex-box(column,nowrap, center, center, center);
     @include setBackground(url(../../pictures/fotos/robot-ge068a6770_1920.jpg), cover,  center);
+
+    & button{
+        border-style: none;
+        height: 60px;
+        width: 350px;
+        color: $color-white;
+        font-size: $font-size-20;
+        background-color: $color-red;
+        border-radius: 10px;
+        margin-left: 60%;
+        margin-right: 20px;
+        margin-top: 300px;
+        @media screen and (max-width:$Tablet-size){
+            margin-left: 10%;
+            margin-top: 300px;
+        
+        }
+        @media screen and (max-width:$Smartphone-size){
+            margin-left: 10px;
+            margin-top: 200px;
+            height: 50px;
+            width: 300px;
+            font-size: $font-size-18;
+        }
+    }
 }
-footer{
-    @include flex-box(row,nowrap, space-between, center, center);
-    height:500px;
+.footer{
+    @include flex-box(row,wrap, space-between, center, center);
+    height: fit-content;
     background-color: $color-bank-yellow;
     margin: -20px 0;
-    padding: 20px;
+    padding: 100px 10%;
+
+    &_col-one{
+        transform: translateY(-35px);
+        & ul{
+            width: fit-content;
+            max-width:500px;
+            & li{
+                line-height: 40px;
+                & span {
+                    & img{
+                        margin-right: 10px;
+                        transform: translateY(5px)
+                    }
+                }
+            }
+        }
+      
+    }
+    &_col-two{
+        & ul{
+            width: 300px;
+            & li{
+                transform: translateX(30px);
+                line-height: 40px;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    margin-left: -20px;
+                    margin-top: 15px;
+                    border-radius: 50%;
+                    background-color:black;
+                }
+            }
+        }
+    }
+    &_col-three{
+        transform: translateY(-100px);
+        & ul{
+            width: 300px;
+            & li{
+                line-height: 40px;
+                & span {
+                    & img{
+                        margin-right: 10px;
+                        transform: translateY(5px)
+
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width:768px){
+            transform: translateY(-10px);
+        }
+    }
+
+    @media screen and (max-width:$Tablet-size){
+        & h1{
+            font-size: $font-size-20;
+        }
+    }
 }
