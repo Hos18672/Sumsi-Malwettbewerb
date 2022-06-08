@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Slide Gallery</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .imageContainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .imFig{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem;
+            flex-shrink: 0;
+            margin: 0;
+        }
+
+        .imFig img{
+            width: 100%;
+        }
+
+        .imFig img:hover{
+            opacity: 0.8;
+        }
+
+
+
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            opacity: 0.8;
+            /* display: none; */
+            transition: opacity 0.5s;
+        }
+
+        /* .modal-dialog{
+            
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="imageContainer">
+        <figure class="imFig">
+            <img src="../pics/Alexander-6-2.jpg" alt="ein gemaltes Bild" data-id="1">
+            <figcaption>Alexander <span class="age">6 Jahre</span></figcaption>
+        </figure>
+
+        <figure class="imFig">
+            <img src="../pics/Ariana-5-1-1024x714.jpg" alt="ein gemaltes Bild" data-id="2">
+            <figcaption>Alexander <span class="age">6 Jahre</span></figcaption>
+        </figure>
+
+        <figure class="imFig">
+            <img src="../pics/Elina-4.jpg" alt="ein gemaltes Bild" data-id="3">
+            <figcaption>Alexander <span class="age">6 Jahre</span></figcaption>
+        </figure>
+
+        <figure class="imFig">
+            <img src="../pics/Hanna-3-2.jpeg" alt="ein gemaltes Bild" data-id="4">
+            <figcaption>Alexander <span class="age">6 Jahre</span></figcaption>
+        </figure>
+
+        <figure class="imFig">
+            <img src="../pics/Mia-7.jpg" alt="ein gemaltes Bild" data-id="5">
+            <figcaption>Alexander <span class="age">6 Jahre</span></figcaption>
+        </figure>
+
+
+
+
+        <div class="modal" id="modal">
+            <div class="modal-dialog">
+                <img class="modal-image" id="1">
+                <img class="modal-image" id="2">
+                <img class="modal-image" id="3">
+                <img class="modal-image" id="4">
+                <img class="modal-image" id="5">
+            </div>
+        </div>
+
+    </div><!-- image container-->
+    
+
+
+
+<!-- ------------------------------------
+
+JS AREA
+
+------------------------------------------->
+
+<script>
+    const 
+        imgToMakeBigger = document.querySelectorAll('.imFig img'),
+        theBigPic = document.querySelectorAll('.modal-image')
+
+    let i 
+
+    imgToMakeBigger.forEach ( item => {
+        console.log(item.dataset.id)
+        i = item.dataset.id
+        console.log(i)
+    })
+
+    console.log('the dataset i ', i)
+
+    console.log(imgToMakeBigger)
+
+    console.log(theBigPic)
+
+    theBigPic.forEach( (item) => {
+        console.log(item.id)
+    })
+
+
+//the modal function
+
+    imgToMakeBigger.forEach( (item) => {
+        item.addEventListener('click', () => {
+            let id = item.dataset.id
+
+            console.log('the id', id)
+
+
+        })
+    })
+</script>
+
+
+</body>
+</html>
