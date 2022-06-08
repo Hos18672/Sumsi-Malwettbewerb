@@ -34,6 +34,10 @@
     margin: 0.5rem;
     flex-shrink: 0;
 
+    // &:hover{
+    //     box-shadow: 0 0px 10px $color-bank-yellow;
+    //  }
+
     @media screen and (max-width: 1279px) {
         width: 25%;
         margin: 1rem;
@@ -64,10 +68,17 @@
     &_figure{
         // @include testing-border-2();
         width: 100%;
+        z-index: 1;
 
+        
         &_image{
             // transform: scale(0.3);
             width: inherit;
+
+            &:hover{
+               box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            // opacity: 0.7;
+            }
         }
 
         & figcaption{
@@ -150,5 +161,101 @@
             }
         }
 
+    }
+}
+
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 15;
+    // @include flex-center-row();
+    // @include flex-box(row, nowrap, center, flex-start, flex-start);
+    @include flex-center-row();
+    display: none;
+    // padding-top: 2rem;
+
+    &_dialog{
+        // min-width: 50vw;
+        // min-height: 80vh;
+        // background-color: #fff;
+
+        &_main{
+            // max-height: 50vh;
+            @include flex-center-column();
+            // border: 5px solid tomato;
+    
+            & .big-img{
+                // display: block;
+                max-height: 90vh;
+                transform: scale(0);
+                opacity: 0;
+                transition: transform 1s, opacity 1s;
+
+                @media screen and (max-width: 1020px){
+                    max-width: 80%;
+                    max-height: 80vh;
+                    object-fit: cover
+                }
+            }
+        }
+       
+    }
+
+    &_close-modal{
+        all: initial;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: #000;
+        border-radius: 50%;
+        padding: 0rem;
+        @include flex-center-row();
+        z-index: 15;
+
+        & img{
+            width: 3rem;
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &_slide-left,
+    &_slide-right{
+        width: 3rem;
+        position: absolute;
+        top: calc(50vh - 1.5rem);
+
+        // @media screen and (max-width: 1020px){
+        //    top: 1rem;
+        // }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &_slide-left{
+        left: 1rem;
+
+        // @media screen and (max-width: 1020px){
+        //     left: calc(50% -3rem);
+        //  }
+    }
+
+    &_slide-right{
+        right: 1rem;
+
+        // @media screen and (max-width: 1020px){
+        //     left: calc(50% + 3rem);
+        //  }
     }
 }
