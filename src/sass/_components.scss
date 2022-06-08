@@ -32,9 +32,13 @@ Hamburger Menue
 }
 
 #hamburger-check:checked ~ .make-it-darker{
+    display: block;
     opacity: 0.5;
     // z-index: 1;
 }
 
+.make-it-darker{
+    display: none;
+}
 
 

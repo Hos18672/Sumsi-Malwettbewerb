@@ -1,9 +1,6 @@
 # Notizen
 
 
-
-
-
 ## most Viewports at this time
 
 

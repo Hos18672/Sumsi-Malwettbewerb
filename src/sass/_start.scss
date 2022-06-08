@@ -3,7 +3,6 @@ body{
     padding:0;
 }
 main{
-    overflow:hidden;
     font-family:  $font-main;
     margin: 0;
     padding:0;
@@ -17,6 +16,7 @@ section{
     &_logo-cool{
         height: 200px;
         width: 550px;
+        margin-right: 20px;
         @media screen and (max-width:$Tablet-size){
             height: 120px;
             width: 370px;
@@ -244,7 +244,7 @@ section{
 
 .pictures-container{
     @include flex-box(column,nowrap, center, center, center);
-    @include setBackground(url(../../pictures/fotos/robot-ge068a6770_1920.jpg), cover,  center);
+    @include setBackground(url(../../pictures/fotos/robot.png), cover,  center);
 
     & button{
         border-style: none;
@@ -277,6 +277,7 @@ section{
     background-color: $color-bank-yellow;
     margin: -20px 0;
     padding: 100px 10%;
+    z-index: 11;
 
     &_col-one{
         transform: translateY(-35px);
@@ -301,6 +302,7 @@ section{
             & li{
                 transform: translateX(30px);
                 line-height: 40px;
+       
                 &::before{
                     position: absolute;
                     content: "";
@@ -310,6 +312,13 @@ section{
                     margin-top: 15px;
                     border-radius: 50%;
                     background-color:black;
+                }
+                & a{
+                    font-family: $font-main;
+                    cursor: pointer;
+                }
+                & .datenschutz-link{
+                    cursor: pointer;
                 }
             }
         }
