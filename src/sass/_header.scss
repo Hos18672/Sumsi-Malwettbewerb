@@ -92,13 +92,12 @@
         position: relative;
         z-index: 9;
         padding-right: 1rem;
-
         @media screen and (max-width: 1279px) {
             width: 50vw;
             height: 100vh;
             position: fixed;
             top: 0;
-            right: -100%;
+            right: -130%;
             background-color: $color-bank-yellow;
             padding-top: 4rem;
             transition: right 0.8s;
@@ -106,6 +105,7 @@
 
         @media screen and (max-width: 767px) {
             width: 100vw;
+     
     
         }
 
@@ -137,7 +137,7 @@
                     border-radius: 1rem ;
 
                     // filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5))
-                }
+                  }
 
                 }
 
@@ -148,7 +148,6 @@
                 @media screen and (max-width: 434px) {
                     font-size: 1rem;
                 }
-
             }
 
             & .nav-logo{
@@ -171,10 +170,7 @@
 
             }
         }
-
     }
-
-
 }
 
 .make-it-darker{

@@ -156,10 +156,8 @@ section{
                      transform: translateY(-170px)
                  }
             }
-
         }
     }
-
     @media  only screen and (max-width: $Tablet-size){
         height: fit-content
     }
@@ -176,7 +174,6 @@ section{
        
         @media screen and (max-width:$Tablet-size){
             width:400px;
-        
         }
         @media screen and (max-width:$Smartphone-size){
             width:300px;
@@ -188,7 +185,6 @@ section{
         padding: 50px;
         font-size: $font-size-25;
         border-radius: 30px;
-  
         & .info-two-list{
             & li{
                 margin-left: 30px;
@@ -228,7 +224,6 @@ section{
         border-radius: 10px;
         margin-left: 10%;
         margin-top: 200px;
-
         @media screen and (max-width:$Tablet-size){
             margin-top: 200px;
         

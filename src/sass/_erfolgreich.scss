@@ -1,0 +1,60 @@
+
+.upload_erfolgreich{
+  height: 700px;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  place-items: center;
+  gap: 1rem;
+  & ul{
+    border: dashed 4px;
+    padding: 3rem;
+    border-radius: 10px;
+    grid-column: 2;
+    width: 80%;
+    & li{
+      font-size: $font-size-20;
+      line-height: 3rem;
+    }
+  }
+  & .user_Bild{
+    grid-column: 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    & img{
+      margin-top: 3rem;
+      width:80%;
+      border-radius: 10px;
+    }
+
+    & span{
+      margin: 20px 0;
+      font-size: $font-size-20;
+      color: $color-green;
+    }
+
+  }
+
+  @media screen and(max-width: 868px){
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: repeat(2, 1fr);
+    & ul{
+        grid-column: 2;
+        grid-row: 1;
+        & li{
+          font-size: $font-size-18;
+          line-height: 3rem;
+        }
+      }   
+      & .user_Bild{
+        grid-column: 2;
+        grid-row: 2;
+    
+    }
+    }
+ 
+  
+}
+
+
