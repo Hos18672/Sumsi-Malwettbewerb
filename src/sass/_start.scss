@@ -3,7 +3,6 @@ body{
     padding:0;
 }
 main{
-    overflow:hidden;
     font-family:  $font-main;
     margin: 0;
     padding:0;
@@ -11,12 +10,16 @@ main{
 section{
     height:100vh;
 }
+
+
+
 .start-container{
     @include flex-right-row;
     @include setBackground(url(../../pictures/fotos/child-background.jpg), cover, bottom );
     &_logo-cool{
         height: 200px;
         width: 550px;
+        margin-right: 20px;
         @media screen and (max-width:$Tablet-size){
             height: 120px;
             width: 370px;
@@ -156,10 +159,8 @@ section{
                      transform: translateY(-170px)
                  }
             }
-
         }
     }
-
     @media  only screen and (max-width: $Tablet-size){
         height: fit-content
     }
@@ -176,7 +177,6 @@ section{
        
         @media screen and (max-width:$Tablet-size){
             width:400px;
-        
         }
         @media screen and (max-width:$Smartphone-size){
             width:300px;
@@ -188,7 +188,6 @@ section{
         padding: 50px;
         font-size: $font-size-25;
         border-radius: 30px;
-  
         & .info-two-list{
             & li{
                 margin-left: 30px;
@@ -217,18 +216,26 @@ section{
 .upload-container{
     @include flex-box(column,nowrap, center, left, center);
     @include setBackground(url(../../pictures/fotos/colourful-pencils-background.jpg), cover, bottom );
-     
-    & button{
+    & .english{
+    
+        display:none;
+    }
+    
+    &_button {
+        cursor: pointer;
+        display: flex;
+        justify-content:center;
+        align-items:center;
         border-style: none;
         height: 60px;
         width: 350px;
+        font-family: $font-main;
         color: $color-white;
         font-size: $font-size-20;
         background-color: $color-red;
         border-radius: 10px;
         margin-left: 10%;
         margin-top: 200px;
-
         @media screen and (max-width:$Tablet-size){
             margin-top: 200px;
         
@@ -240,16 +247,27 @@ section{
             font-size: $font-size-18;
         }
     }
+
+
+    
 }
 
 .pictures-container{
     @include flex-box(column,nowrap, center, center, center);
-    @include setBackground(url(../../pictures/fotos/robot-ge068a6770_1920.jpg), cover,  center);
-
-    & button{
+    @include setBackground(url(../../pictures/fotos/robot.png), cover,  center);
+    & .english{ 
+        display:none;
+    }
+    
+    &_button{
+        cursor: pointer;
+        display: flex;
+        justify-content:center;
+        align-items:center;
         border-style: none;
         height: 60px;
         width: 350px;
+        font-family: $font-main;
         color: $color-white;
         font-size: $font-size-20;
         background-color: $color-red;
@@ -277,6 +295,7 @@ section{
     background-color: $color-bank-yellow;
     margin: -20px 0;
     padding: 100px 10%;
+    z-index: 11;
 
     &_col-one{
         transform: translateY(-35px);
@@ -301,6 +320,7 @@ section{
             & li{
                 transform: translateX(30px);
                 line-height: 40px;
+       
                 &::before{
                     position: absolute;
                     content: "";
@@ -310,6 +330,13 @@ section{
                     margin-top: 15px;
                     border-radius: 50%;
                     background-color:black;
+                }
+                & a{
+                    font-family: $font-main;
+                    cursor: pointer;
+                }
+                & .datenschutz-link{
+                    cursor: pointer;
                 }
             }
         }

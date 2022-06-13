@@ -29,6 +29,7 @@
     @include flex-center-column();
     width: 28%;
     @include box-shadow-1();
+    box-shadow: 1px 4px 17px -2px #000000;
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 0.5rem;

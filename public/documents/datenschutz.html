@@ -19,7 +19,51 @@
             <a href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
                 <img src="../pics/bank-logo.svg" alt="Logo der Raiffeisen Bank" class="header_bank-logo">
             </a>
-            <img src="../../pictures/Icons/icon_home.png" alt="home" class="icon-home"> 
+
+            <h1 class="header_main-heading">Der Sumsi Malwettbewerb der Raiffeisen Bank</h1>
+
+            <input type="checkbox" class="header_hamburger-check" id="hamburger-check">
+            <label for="hamburger-check" class="header_button" id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="make-it-darker"></div>
+
+            <nav class="header_nav">
+                <ul class="header_nav_ul">
+                    <li>
+                        <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link german" target="_blank">Bilder hochladen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link english" lang="en" target="_blank">Picture Upload</a>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="gallery.html" class="navi-link german" target="_blank">Bilder anzeigen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="gallery.html" class="navi-link english" lang="en" target="_blank">Show pictures</a>
+                    </li>
+                    
+                    <li>
+                        <span class="navi-link german change-language" lang="en">English</span>
+                    </li>
+                    <li>
+                        <span class="navi-link english change-language" lang="de">Deutsch</span>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="../index.html" target="_blank">
+                            <img src="../pics/icon_home.webp" alt="Home Icon" class="home-button">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section class="datenschutz-container">
@@ -29,7 +73,7 @@
                         Data protection information according to Art. 13 DSGVO 
                         for the Sumsi painting competition<br><br><br>
                         We treat your personal data confidentially and in accordance with the statutory provisions. We hereby inform you about the processing of your personal data and that of your child and the data protection claims and rights to which you are entitled. The content and scope of the data processing is largely determined by the information you provide in the context of the painting competition via the online contact form
-                          <br><br>
+                        <br><br>
                         <b>Who is responsible for data processing and whom can you contact?</b>
                         <br><br><br>
                         Responsible for data processing is the
@@ -100,7 +144,8 @@
                     Davon unberührt bleibt Ihr Recht, sich bei der zuständige Datenschutzbehörde per E-Mail an dsb@dsb.gv.at oder postalisch an Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien zu beschweren
             </p>
             </section>
-            <footer class="footer">
+            
+            <footer class="footer" id="footer">
                 <div class="footer_col-one">
                     <ul>
                         <h1 class=" german">KONTAKT</h1>
@@ -114,28 +159,29 @@
                     <ul>
                         <h1 class="german">INFO/BEDINGUNGEN</h1>
                         <h1 class="english">INFO/CONDITIONS</h1>
-                        <li class="german">Datenschutz</li>
-                        <li class="english">Data privacy</li>
-                        <li class="german">Teilnahmebedingungen</li>
-                        <li class="english">Conditions of participation</li>
-                        <li>Impressum</li>
-                        <li>AGB</li>
-                        <li>Disclaimer</li>
-                        <li class="german">Cookie Richtlinien</li>
-                        <li class="english">Cookie guidelines</li>
+                        <li class="german"> <a target="_self" href="datenschutz.html" class="datenschutz-link">Datenschutz</a></li>
+                        <li class="english"><a target="_self" href="datenschutz.html" class="datenschutz-link ">Data privacy</a></li>
+                        <li class="german"><a target="_self" href="Teilnahmebedingungen.html" class="datenschutz-link">Teilnahmebedingungen</a></li>
+                        <li class="english"><a target="_self" href="Teilnahmebedingungen.html" class="datenschutz-link">Conditions of participation</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/impressum.html" class="Impressum-link"> Impressum</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/agb.html" class="Impressum-link">AGB</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/disclaimer.html" class="Impressum-link">Disclaimer</a></li>
+                        <li  class="german"><a target="_self" href="cookies.html"  class="Impressum-link">Cookie Richtlinien</a></li>
+                        <li  class="english"><a target="_self" href="cookies.html" class="Impressum-link">Cookie guidelines</a></li>
                     </ul>
                 </div>
                 <div class="footer_col-three">
                     <ul>
                         <h1>SOCIAL MEDIA</h1>
                         <li><span><img src="../../pictures/Icons/facebook.svg" alt="location"></span>Facebook</li>
+               
                     </ul>
                 </div>
             </footer>
         </main>
     </div>
     <!-- ende container-->
-    <script src=".././src/js/change-language.js">   
+    <script src="../../src/js/change-language.js">   
     </script>
 </body>
 </html>

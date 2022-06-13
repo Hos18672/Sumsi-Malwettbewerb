@@ -17,12 +17,54 @@
 <body>
     <div class="container">
         <header class="header">
-            <a href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
+            <a target="_self" href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
                 <img src="../pics/bank-logo.svg" alt="Logo der Raiffeisen Bank" class="header_bank-logo">
             </a>
 
-            <img src="../../pictures/Icons/icon_home.png" alt="home" class="icon-home">
-         
+            <h1 class="header_main-heading">Der Sumsi Malwettbewerb der Raiffeisen Bank</h1>
+
+            <input type="checkbox" class="header_hamburger-check" id="hamburger-check">
+            <label for="hamburger-check" class="header_button" id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="make-it-darker"></div>
+
+            <nav class="header_nav">
+                <ul class="header_nav_ul">
+                    <li>
+                        <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link german" target="_blank">Bilder hochladen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link english" lang="en" target="_blank">Picture Upload</a>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="gallery.html" class="navi-link german" target="_blank">Bilder anzeigen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="gallery.html" class="navi-link english" lang="en" target="_blank">Show pictures</a>
+                    </li>
+                    
+                    <li>
+                        <span class="navi-link german change-language" lang="en">English</span>
+                    </li>
+                    <li>
+                        <span class="navi-link english change-language" lang="de">Deutsch</span>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="../index.html" target="_blank">
+                            <img src="../pics/icon_home.webp" alt="Home Icon" class="home-button">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
 
@@ -62,17 +104,16 @@
                     TAll natural persons are eligible to participate.
                     Participation in the painting competition is free of charge, voluntary and independent of banking transactions. The winners will be chosen at random. The legal process is excluded. Prizes cannot be redeemed, transferred or exchanged for cash. <br><br>
                     Participation via sweepstake clubs or automated services is not permitted. Only one entry per person is possible. In the event of winning, the participant may accept the non-cash prizes within 4 weeks of electronic notification, after which this entitlement and the prize shall lapse.<br><br>
-                    Der Veranstalter übernimmt keine Haftung für etwaige technische Schwierigkeiten.
-                    Der/Die TeilnehmerIn erklärt, dass seine/ihre Einreichung zum Malwettbewerb (die Zeichnung) nicht gegen die Rechte Dritter, insbesondere Urheberrechte und Persönlichkeitsrechte, verstößt. Er/sie erklärt sich mit der Veröffentlichung der Zeichnung im Rahmen des Malwettbewerbs bzw. auf der Homepage des Veranstalters ausdrücklich einverstanden<br>
-                    Falls andere Personen an der Erstellung der Zeichnung beteiligt waren oder Dritten exklusive Rechte am eingereichten Beitrag eingeräumt wurden, so müssen sich diese mit der Einreichung und späteren Veröffentlichung im Rahmen des Malwettbewerbs einverstanden erklären.
+                    The organiser accepts no liability for any technical difficulties.
+                    The participant declares that his/her entry to the painting competition (the drawing) does not violate any rights of third parties, in particular no copyrights or personal rights. He/she expressly agrees to the publication of the drawing within the framework of the painting competition or on the homepage of the organiser.
+                    <br>
+                    If other persons were involved in the creation of the drawing or if third parties were granted exclusive rights to the submitted entry, they must agree to the submission and subsequent publication within the framework of the drawing competition.
                     <br><br>
-                    Der Veranstalter behält sich das Recht vor, in bestimmten Anlassfällen von TeilnehmerInnen einen schriftlichen Nachweis für die Erfüllung der oben genannten Voraussetzungen einzufordern. Wird der Nachweis bei Aufforderung nicht erbracht, kann der/die TeilnehmerIn vom Veranstalter von der Teilnahme ausgeschlossen werden.
-                    <br><br>
-                    Der Veranstalter behält sich das Recht vor, TeilnehmerInnen, die gegen die Teilnahmebedingungen, gegen Strafgesetze oder sonstige Vorschriften bzw. die guten Sitten verstoßen oder durch technische Manipulation versuchen, den Malwettbewerb in irgendeiner Form zu beeinflussen, von eben diesem auszuschließen. Im Falle eines Ausschlusses vom Malwettbewerb steht es dem Veranstalter frei, die Gewinne auch noch nachträglich abzuerkennen und zurückzufordern.<br>
-                    Der Veranstalter behält sich das Recht vor, den Malwettbewerb bzw. die Verlosung jederzeit aus wichtigem Grund ohne Vorankündigung zu beenden oder zu unterbrechen. Dies gilt unter anderem, wenn der planmäßige Ablauf des Malwettbewerbs bzw. die Verlosung gestört oder verhindert werden würde. Dem/der TeilnehmerIn erwachsen daraus keinerlei Rechte.
-            </p>
+                    The organiser reserves the right to request written proof of fulfilment of the above-mentioned requirements from participants in certain cases. If the proof is not provided upon request, the participant may be excluded from participation by the organiser.                    <br><br>
+                    The organiser reserves the right to exclude participants from the painting competition who violate the conditions of participation, criminal law or other regulations or morality, or who attempt to influence the painting competition in any way through technical manipulation. In the event of exclusion from the painting competition, the organiser shall be at liberty to subsequently disallow and reclaim the prizes.<br>
+                    The organiser reserves the right to terminate or interrupt the painting competition or the raffle at any time for good cause without prior notice. This applies, among other things, if the scheduled course of the painting competition or the raffle would be disrupted or prevented. The participant shall not be entitled to any rights whatsoever.            </p>
             </section>
-            <footer class="footer">
+            <footer class="footer" id="footer">
                 <div class="footer_col-one">
                     <ul>
                         <h1 class=" german">KONTAKT</h1>
@@ -86,15 +127,15 @@
                     <ul>
                         <h1 class="german">INFO/BEDINGUNGEN</h1>
                         <h1 class="english">INFO/CONDITIONS</h1>
-                        <li class="german">Datenschutz</li>
-                        <li class="english">Data privacy</li>
-                        <li class="german">Teilnahmebedingungen</li>
-                        <li class="english">Conditions of participation</li>
-                        <li>Impressum</li>
-                        <li>AGB</li>
-                        <li>Disclaimer</li>
-                        <li class="german">Cookie Richtlinien</li>
-                        <li class="english">Cookie guidelines</li>
+                        <li class="german"> <a target="_self" href="datenschutz.html" class="datenschutz-link">Datenschutz</a></li>
+                        <li class="english"><a target="_self" href="datenschutz.html" class="datenschutz-link ">Data privacy</a></li>
+                        <li class="german"><a target="_self" href="Teilnahmebedingungen.html" class="datenschutz-link">Teilnahmebedingungen</a></li>
+                        <li class="english"><a target="_self" href="Teilnahmebedingungen.html" class="datenschutz-link">Conditions of participation</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/impressum.html" class="Impressum-link"> Impressum</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/agb.html" class="Impressum-link">AGB</a></li>
+                        <li><a target="_self" href="https://www.raiffeisen.at/ktn/rlb/de/meine-bank/raiffeisen-bankengruppe/disclaimer.html" class="Impressum-link">Disclaimer</a></li>
+                        <li  class="german"><a target="_self" href="cookies.html"  class="Impressum-link">Cookie Richtlinien</a></li>
+                        <li  class="english"><a target="_self" href="cookies.html" class="Impressum-link">Cookie guidelines</a></li>
                     </ul>
                 </div>
                 <div class="footer_col-three">
@@ -108,7 +149,7 @@
         </main>
     </div>
     <!-- ende container-->
-    <script src=".././src/js/change-language.js">   
+    <script src="../../src/js/change-language.js">   
     </script>
 </body>
 </html>

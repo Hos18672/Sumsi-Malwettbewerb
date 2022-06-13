@@ -25,16 +25,23 @@ Hamburger Menue
     transform: rotate(-45deg);
 }
 
-
-
 #hamburger-check:checked ~ .header_nav{
     right: 0;
 }
 
 #hamburger-check:checked ~ .make-it-darker{
+    display: block;
     opacity: 0.5;
     // z-index: 1;
 }
 
+.make-it-darker{
+    display: none;
+}
+
+.english{
+    
+    display:none;
+}
 
 

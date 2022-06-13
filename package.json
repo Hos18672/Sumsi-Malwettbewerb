@@ -13,5 +13,8 @@
     "url": "git@gitlab.tailored-apps.com:coding-school/ss2022/webdevelopment/sumsi-challenge-ahs.git"
   },
   "author": "Reza",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
