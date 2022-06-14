@@ -1,0 +1,525 @@
+openapi: 3.0.3
+info:
+    title: 'Sumsi Backend'
+    description: ''
+    version: 1.0.0
+servers:
+    -
+        url: 'https://sumsi.dev.webundsoehne.com'
+paths:
+    /api/v1/login:
+        post:
+            summary: Login
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjEwYjk0ZjRkNTJhMzdhYTgxZDFkNzk0M2E2ZjM5ZmIyZjY5MGJiNGVlMDdjYjZkYzFhMjI5YmRhZmZjODFiMGI2NzIwYTNiYmY5ZDM5MDQiLCJpYXQiOjE2MDYxMzkxOTMsIm5iZiI6MTYwNjEzOTE5MywiZXhwIjoxNjM3Njc1MTkzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.o1PDMqmNuUHly9WCOa7h7lJbBNLqKu2oYUSALfpnWQhXYvVRp82c7B5EFdQMUnxmyTSLT2_Ei4buvK97wVjdETWeEg8N8pog62pwNjv8g7XmdQsWY-o0szs0lyEglXC8mINBmcXpc0s7fcc-p2mCndtn5dgDaWRy7SOXhHBI5i4AVrJ6HHsL7Ni5lthUfxJi_IxIIBL2lZug51prdXUEXzRk-9qVTGMjyH5hsQU0wi7zLKwHMjFSdp-_KfNAGpqsfdokPuKEgxqKu8JEyLmsrCb_ExK3kIg5ygDQRNxT62KGT3LcbfgGI-HU5a7QXY7SjeEGZq2IuCR1OcoM6fTdns_xiK-Gz3wg-MOWEmQg-m6uBx_kjYk5Kp0jVlf-KLKJJqAu4QUsm3B6egmjP1kY-qgYD_da124R_rpQw3CL8Xk18ef_7YLed9bNnd_vN9CMVQS6R5DzOzXDXJN0rUtfEBs2vciuqv7vIV3jRfG_iVEaiOeY8Qai5YAm-PlRkyVoxi1iDo8SpfWOTh_YkdA-14kLA1kDVniA2UskEKj146Ub-qcribzK_brEmyb0t4OGDf6_AhGk0VPsewjEu5uv6Iwe4gsZWKoyX0iptoKwhq3Mezi1ZqO8y5efSbs8DCMLkhP4xiZSVza375lurkMAiIq53Gb6o4gqfsf4nCNOqeI
+                                properties:
+                                    status: { type: string, example: success }
+                                    token: { type: string, example: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjEwYjk0ZjRkNTJhMzdhYTgxZDFkNzk0M2E2ZjM5ZmIyZjY5MGJiNGVlMDdjYjZkYzFhMjI5YmRhZmZjODFiMGI2NzIwYTNiYmY5ZDM5MDQiLCJpYXQiOjE2MDYxMzkxOTMsIm5iZiI6MTYwNjEzOTE5MywiZXhwIjoxNjM3Njc1MTkzLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.o1PDMqmNuUHly9WCOa7h7lJbBNLqKu2oYUSALfpnWQhXYvVRp82c7B5EFdQMUnxmyTSLT2_Ei4buvK97wVjdETWeEg8N8pog62pwNjv8g7XmdQsWY-o0szs0lyEglXC8mINBmcXpc0s7fcc-p2mCndtn5dgDaWRy7SOXhHBI5i4AVrJ6HHsL7Ni5lthUfxJi_IxIIBL2lZug51prdXUEXzRk-9qVTGMjyH5hsQU0wi7zLKwHMjFSdp-_KfNAGpqsfdokPuKEgxqKu8JEyLmsrCb_ExK3kIg5ygDQRNxT62KGT3LcbfgGI-HU5a7QXY7SjeEGZq2IuCR1OcoM6fTdns_xiK-Gz3wg-MOWEmQg-m6uBx_kjYk5Kp0jVlf-KLKJJqAu4QUsm3B6egmjP1kY-qgYD_da124R_rpQw3CL8Xk18ef_7YLed9bNnd_vN9CMVQS6R5DzOzXDXJN0rUtfEBs2vciuqv7vIV3jRfG_iVEaiOeY8Qai5YAm-PlRkyVoxi1iDo8SpfWOTh_YkdA-14kLA1kDVniA2UskEKj146Ub-qcribzK_brEmyb0t4OGDf6_AhGk0VPsewjEu5uv6Iwe4gsZWKoyX0iptoKwhq3Mezi1ZqO8y5efSbs8DCMLkhP4xiZSVza375lurkMAiIq53Gb6o4gqfsf4nCNOqeI }
+                401:
+                    description: '401'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    error: 'invalid credentials'
+                                properties:
+                                    error: { type: string, example: 'invalid credentials' }
+            tags:
+                - Auth
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                email:
+                                    type: email
+                                    description: 'The admins mail address'
+                                    example: admin@csaw.at
+                                password:
+                                    type: string
+                                    description: 'The admins password'
+                                    example: pw4sumsiadmin
+                            required:
+                                - email
+                                - password
+            security: []
+    /api/v1/settings:
+        get:
+            summary: Settings
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.index.success
+                                    data: { submission_open: false, voting_open: true }
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.index.success }
+                                    data: { type: object, example: { submission_open: false, voting_open: true } }
+            tags:
+                - Settings
+    /api/v1/submissions:
+        get:
+            summary: "Get all submission\nThis endpoint returns all submissions."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                example:
+                                    - { status: success, status_code: 200, message: api.messages.index.success, data: [{ id: 123e4567-e89b-12d3-a456-426614174001, legalguardian_firstname: Homer, legalguardian_lastname: Simpson, email: homer@thesimpsons.com, child_firstname: Part, child_age: '12', approval_privacypolicy: 1, approval_participation: 1, approval_mailnotification: 1, created_at: null, updated_at: null, image: null, votings: null }, { id: 123e4567-e89b-12d3-a456-426614174002, legalguardian_firstname: Marge, legalguardian_lastname: Simpson, email: marge@thesimpsons.com, child_firstname: Lisa, child_age: '10', approval_privacypolicy: 1, approval_participation: 1, approval_mailnotification: 1, created_at: null, updated_at: null, image: null, votings: null }, { id: 123e4567-e89b-12d3-a456-426614174003, legalguardian_firstname: Homer, legalguardian_lastname: Simpson, email: homerlovesduffbeer@thesimpsons.com, child_firstname: Maggie, child_age: '4', approval_privacypolicy: 1, approval_participation: 1, approval_mailnotification: 1, created_at: null, updated_at: null, image: null, votings: null }] }
+            tags:
+                - Submission
+        post:
+            summary: "Store new submission\nThis endpoint stores a single submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: multipart/form-data
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.store.success
+                                    data: null
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.store.success }
+                                    data: { type: string, example: null }
+            tags:
+                - Submission
+            requestBody:
+                required: true
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            properties:
+                                legalguardian_firstname:
+                                    type: string
+                                    description: 'Firstname of legal guardian.'
+                                    example: Homer
+                                legalguardian_lastname:
+                                    type: string
+                                    description: 'Lastname of legal guardian.'
+                                    example: Simpson
+                                email:
+                                    type: string
+                                    description: 'Email of legal guardian. The value must be a valid email address.'
+                                    example: homer@thesimpsons.com
+                                child_firstname:
+                                    type: string
+                                    description: 'Firstname of child.'
+                                    example: Bart
+                                child_age:
+                                    type: string
+                                    description: 'Age of child.'
+                                    example: 12
+                                image:
+                                    type: string
+                                    format: binary
+                                    description: 'The value must be an image.'
+                                approval_privacypolicy:
+                                    type: boolean
+                                    description: 'Privacy policy approval.'
+                                    example: true
+                                approval_participation:
+                                    type: boolean
+                                    description: 'Participation policy approval.'
+                                    example: true
+                                approval_mailnotification:
+                                    type: boolean
+                                    description: 'Mail notification approval.'
+                                    example: true
+                            required:
+                                - legalguardian_firstname
+                                - legalguardian_lastname
+                                - email
+                                - child_firstname
+                                - child_age
+                                - image
+                                - approval_privacypolicy
+                                - approval_participation
+                                - approval_mailnotification
+    '/api/v1/submissions/{submission}':
+        get:
+            summary: "Show submission\nThis endpoint returns a single submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.index.success
+                                    data: { id: 123e4567-e89b-12d3-a456-426614174001, legalguardian_firstname: Homer, legalguardian_lastname: Simpson, email: homer@thesimpsons.com, child_firstname: Part, child_age: '12', approval_privacypolicy: 1, approval_participation: 1, approval_mailnotification: 1, created_at: null, updated_at: null }
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.index.success }
+                                    data: { type: object, example: { id: 123e4567-e89b-12d3-a456-426614174001, legalguardian_firstname: Homer, legalguardian_lastname: Simpson, email: homer@thesimpsons.com, child_firstname: Part, child_age: '12', approval_privacypolicy: 1, approval_participation: 1, approval_mailnotification: 1, created_at: null, updated_at: null } }
+            tags:
+                - Submission
+        delete:
+            summary: "Delete submission\nThis endpoint deletes a single submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.delete.success
+                                    data: null
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.delete.success }
+                                    data: { type: string, example: null }
+            tags:
+                - Submission
+        parameters:
+            -
+                in: path
+                name: submission
+                description: ''
+                example: 123e4567-e89b-12d3-a456-426614174001
+                required: true
+                schema:
+                    type: string
+    '/api/v1/submissions/{submission}/votings':
+        get:
+            summary: "Get all votes of submission\nThis endpoint returns all otes of a submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.index.success
+                                    data: [{ id: 123e4567-e89b-12d3-a456-426614174001, email: voting_0@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174011, email: voting_1@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174021, email: voting_2@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174031, email: voting_3@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174041, email: voting_4@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }]
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.index.success }
+                                    data: { type: array, example: [{ id: 123e4567-e89b-12d3-a456-426614174001, email: voting_0@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174011, email: voting_1@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174021, email: voting_2@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174031, email: voting_3@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }, { id: 123e4567-e89b-12d3-a456-426614174041, email: voting_4@thesimpsons.com, submission_id: 123e4567-e89b-12d3-a456-426614174001, created_at: null, updated_at: null }], items: { type: object } }
+            tags:
+                - Voting
+        post:
+            summary: "Store new vote\nThis endpoint stores a single submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.store.success
+                                    data: null
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.store.success }
+                                    data: { type: string, example: null }
+            tags:
+                - Voting
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                email:
+                                    type: string
+                                    description: 'Email of voting user. The value must be a valid email address.'
+                                    example: homer@thesimpsons.com
+                            required:
+                                - email
+        parameters:
+            -
+                in: path
+                name: submission
+                description: ''
+                example: 123e4567-e89b-12d3-a456-426614174001
+                required: true
+                schema:
+                    type: string
+    '/api/v1/submissions/{submission}/votes/count':
+        get:
+            summary: "Count votes\nThis endpoint counts all votes per submission."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer {YOUR_AUTH_KEY}'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: success
+                                    status_code: 200
+                                    message: api.messages.count.success
+                                    data: { votes: 10 }
+                                properties:
+                                    status: { type: string, example: success }
+                                    status_code: { type: integer, example: 200 }
+                                    message: { type: string, example: api.messages.count.success }
+                                    data: { type: object, example: { votes: 10 } }
+            tags:
+                - Voting
+        parameters:
+            -
+                in: path
+                name: submission
+                description: ''
+                example: 123e4567-e89b-12d3-a456-426614174001
+                required: true
+                schema:
+                    type: string
+components:
+    securitySchemes:
+        default:
+            type: http
+            scheme: bearer
+            description: ''
+security:
+    -
+        default: []
