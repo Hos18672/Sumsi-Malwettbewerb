@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#FFEC00">
 </head>
 
-<body>
+<body onload="getTheGallery()">
     <div class="container-for-all">
     
         <header class="header">
@@ -71,161 +71,8 @@
         </header>
 
         <main>
-            <div class="container-gallery">
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Mia-7.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="1">
-                        <figcaption>Alexander,<br class="hidden-break"> <span class="years"> 6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-filled.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Niklas-6-768x1024.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="2">
-                        <figcaption>Alexander,<br class="hidden-break">  <span class="years">6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-filled.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Silian-5.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="3">
-                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Ariana-5-1-1024x714.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="4">
-                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Elina-4.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="5">
-                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-filled.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Hanna-3-2.jpeg" alt="ein gemaltes Bild" class="card_figure_image" data-id="6">
-                        <figcaption>Alexander,<br class="hidden-break"> <span class="years">6 Jahre alt</span></figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-filled.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Lisa-5.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="7">
-                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-filled.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Alexander-6-2.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="8">
-                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Mia-7.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="9">
-                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Niklas-6-768x1024.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="10">
-                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Silian-5.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="11">
-                        <figcaption>Alexander,<br class="hidden-break"> 6 Jahre alt</figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <figure class="card_figure">
-                        <img src="../../pictures/for-testing/Alexander-6-2.jpg" alt="ein gemaltes Bild" class="card_figure_image" data-id="12">
-                        <figcaption>
-                            Alexander,
-                            <br class="hidden-break"> 
-                            <span class="years german">6 Jahre alt</span>
-                            <span class="years english">6 years old</span>
-                        </figcaption>
-                    </figure>
-
-                    <div class="card_rating">
-                        <img src="../pics/star-empty.webp" alt="rating star">
-                        <span>4</span>
-                        <!-- <p>
-                            <span></span>
-                            Sie haben bereits 5 Stimmen abgegeben
-                        </p> -->
-                    </div>
-                </div>
-
+            <div class="container-gallery" id="container-gallery">
+                
 
             </div><!-- ende container gallery-->
         </main>
@@ -242,16 +89,6 @@
                 </div>
 
                 <div class="modal_dialog_main">
-                    <!-- <img class="big-img" id="1">
-                    <img class="big-img" id="2">
-                    <img class="big-img" id="3">
-                    <img class="big-img" id="4">
-                    <img class="big-img" id="5">
-                    <img class="big-img" id="6">
-                    <img class="big-img" id="7">
-                    <img class="big-img" id="8">
-                    <img class="big-img" id="9">
-                    <img class="big-img" id="10"> -->
 
                     <img class="big-img" id="big-img" alt="ein gemaltes Bild">
 
@@ -270,5 +107,8 @@
 
     <script src="../../src/js/modal.js">   
     </script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../src/js/the-gallery.js"></script>
 </body>
 </html>
