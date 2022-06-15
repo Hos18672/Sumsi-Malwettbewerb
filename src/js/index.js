@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 //------------------ Upload ----------------------------------------------
 const form = document.getElementById('upload_form');
 const vorname = document.getElementById('vorname');
@@ -240,3 +229,4 @@ function reset(){
 }
 
 ///--------------------- End Validirung --------------------
+

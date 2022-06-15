@@ -50,8 +50,6 @@ littleImages.forEach( (item, index) => {
 
         // theModalImg.style.transform = 'scale(1)'
         
-
-
     })
 })
 
