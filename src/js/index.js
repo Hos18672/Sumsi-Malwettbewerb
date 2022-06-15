@@ -59,10 +59,7 @@ const baseURL = 'https://sumsi.dev.webundsoehne.com'
 let user = {}
 
 btn.addEventListener('click', (e)=>{
-    
     validate()
-
-
     const privacy = document.getElementById('datenschutz')
     const conditions = document.getElementById('teilnahmebedingungen')
     const mail = document.getElementById('email-offer')
@@ -147,10 +144,7 @@ btn.addEventListener('click', (e)=>{
 
 }); //ende event listener submit
 
-
-
 ///--------------------- Validirung --------------------
-
 
 function validate() {
     if(vorname.value === " " || vorname.value === "" || !isNaN(parseInt(vorname.value))) {
@@ -196,22 +190,19 @@ function validate() {
     }
     else{
         reset()
+        window.location.href= 'erfolgreich.html'
     }
-
 }
 
 
 function isMail(email){
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-   return email.value.match(mailformat);
+   return email.value.match(mailformat)
 }
 
 function isFileImage(file) {
-
-    var allowedType =/(\.jpg|\.jpeg|\.png)$/i;
-           
+    var allowedType =/(\.jpg|\.jpeg|\.png)$/i
     return allowedType.exec(file.value)
-
 }
 
 btn.addEventListener("click", () => {
@@ -249,11 +240,3 @@ function reset(){
 }
 
 ///--------------------- End Validirung --------------------
-
-
-
-///--------------------- Local Storage --------------------
-
-
-
-///--------------------- Ende Local Storage --------------------
