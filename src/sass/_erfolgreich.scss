@@ -7,7 +7,7 @@
   place-items: center;
   gap: 1rem;
   & ul{
-    border: dashed 4px;
+
     padding: 3rem;
     border-radius: 10px;
     grid-column: 2;
@@ -37,14 +37,18 @@
   }
 
   @media screen and(max-width: 868px){
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 5% 1fr 10%;
     grid-template-rows: repeat(2, 1fr);
     & ul{
+       width: 100%;
         grid-column: 2;
         grid-row: 1;
+        padding: 0;
         & li{
+          margin: 1rem;
           font-size: $font-size-18;
           line-height: 3rem;
+
         }
       }   
       & .user_Bild{
