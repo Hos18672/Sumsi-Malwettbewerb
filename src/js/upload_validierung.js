@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-//------------------ Upload ----------------------------------------------
-const form = document.getElementById('upload_form');
 const vorname = document.getElementById('vorname');
 const nachname = document.getElementById("nachname")
 const email = document.getElementById("email")
@@ -53,98 +39,6 @@ const mail_label = document.getElementById("mail-offer-label")
 //--------------------------------------------------------
 const img = document.getElementById("input-file")
 
-const baseURL = 'https://sumsi.dev.webundsoehne.com'
-
-////////////////////////////////////////////////////////////////
-let user = {}
-
-btn.addEventListener('click', (e)=>{
-    validate()
-    const privacy = document.getElementById('datenschutz')
-    const conditions = document.getElementById('teilnahmebedingungen')
-    const mail = document.getElementById('email-offer')
-    const USER_DATA = new FormData(form);
-    USER_DATA.getAll
-    
-    user = {
-         firstname: vorname.value,
-         lastname: nachname.value,
-         email: email.value,
-         age: alter.value,
-         childName : kindname.value,
-         uploaded: true,
-         image: img.value
-    }
-
-    window.localStorage.setItem("User", JSON.stringify(user));
-
-    console.log(USER_DATA)
-    // console.log(privacy.checked)
-
-    if(privacy.checked === true){
-        USER_DATA.set('approval_privacypolicy', '1')
-    }
-    if(conditions.checked === true){
-        USER_DATA.set('approval_participation', '1')
-    }
-    if(mail.checked === true){
-        USER_DATA.set('approval_mailnotification', '1')
-    }
-    USER_DATA.append('image', document.querySelector('input[name="image"]').files[0]);
-    USER_DATA.forEach( item => console.log(item))
-
-    for(const [key, value] of USER_DATA){
-        console.log(`${key} : ${value}`)
-        console.log(typeof value)
-    }
-
-    axios({
-        method: 'post',
-        baseURL: baseURL,
-        url: '/api/v1/login',
-        headers: {
-            'Content-Type': 'multipart/form-data'
-          },
-        data: {
-            email: "admin@csaw.at",
-            password: "pw4sumsiadmin"
-          } 
-      })
-      .then( response => {
-        // console.log('the resoponse of post - ', response.data)
-        // console.log(response.data.token)
-        token = response.data.token
-      })
-      .then ( () => {
-        axios({
-            method: 'post',
-            baseURL: baseURL,
-            url: '/api/v1/submissions',
-            headers: {
-              'Authorization': `Bearer ${token}` ,
-              "Content-Type": "multipart/form-data",
-              "Accept": "application/json",
-            },
-            data: USER_DATA   
-          })
-          .then( response => {
-           console.log(response)
-          }).catch( err => {
-            email.value = "The email is given"
-            email.style.border= "4px solid red"
-           // console.log(err) 
-            console.log(err.response.data)
-        })
-
-          console.log(USER_DATA)
-      })
-      .catch( err => {
-        console.log(err.response.data)
-    })
-
-}); //ende event listener submit
-
-///--------------------- Validirung --------------------
 
 function validate() {
     if(vorname.value === " " || vorname.value === "" || !isNaN(parseInt(vorname.value))) {
@@ -186,27 +80,74 @@ function validate() {
         teilnahmebedingungenLabel.style.color = "red"
     }
     else if(emailOffer.checked == false){
-        //emailLabel.style.color = "red"
+        emailLabel.style.color = "red"
     }
     else{
         reset()
-        window.location.href= 'erfolgreich.html'
+    }
+
+    //--------------- English --------------------------------
+    
+    if(firstname.value === " " || firstname.value === "" || !isNaN(parseInt(firstname.value))) {
+        firstname.value = "Input is invalid"
+        firstname.style.border= "4px solid red"
+    }
+    else if(lastname.value === " " || lastname.value === ""  || !isNaN(lastname.value)) {
+        lastname.value ="Input is invalid"
+        lastname.style.border= "4px solid red"
+    }
+    else  if( mail.value === " " || mail.value === "") {
+         mail.value ="Input is invalid"
+         mail.style.border= "4px solid red"
+    }
+    else if(!isMail(mail)){
+        mail.placeholder = "pleas enter a valid email"
+        mail.style.border= "4px solid red"
+        mail.value = "pleas enter a valid email"
+    }
+    else if(childName.value === " " ||  childName.value === ""  || !isNaN(childName.value)) {
+        childName.value ="Input is invalid"
+        childName.style.border= "4px solid red"
+    }
+    else if(age.value <= 0) {
+        age.placeholder = "Please enter a valid age"
+        age.style.border= "4px solid red"
+    }
+    else if(img.value === null){
+        alert("Please upload a image")
+    }
+    else if(!isFileImage(img)){
+        alert("Please upload a imag in png or jpeg format")
+    }
+    else if(privacy.checked == false){
+        privacy_label.style.color = "red"
+    }
+    else if(conditions.checked == false){
+        conditions_label.style.color = "red"
+    }
+    else if(mailOffer.checked == false){
+        mail_label.style.color = "red"
     }
 }
 
 
 function isMail(email){
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-   return email.value.match(mailformat)
+   return email.value.match(mailformat);
 }
 
 function isFileImage(file) {
-    var allowedType =/(\.jpg|\.jpeg|\.png)$/i
+
+    var allowedType =/(\.jpg|\.jpeg|\.png)$/i;
+           
     return allowedType.exec(file.value)
+
 }
+
 
 btn.addEventListener("click", () => {
     validate()
+    showPreview()
 })
 
 const imgFile = document.getElementById("upload-img-file")
@@ -238,5 +179,3 @@ function reset(){
     teilnahmebedingungenLabel.style.color = "black"
    // emailLabel.style.color = "black"
 }
-
-///--------------------- End Validirung --------------------
