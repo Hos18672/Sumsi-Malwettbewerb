@@ -93,8 +93,8 @@ function getObjectByMail(){
           }
         })
         .then( response => {
-          console.log('the response ', response)
-          console.log('the data of response - ', response.data)
+          // console.log('the response ', response)
+          // console.log('the data of response - ', response.data)
           
           let x = response.data.data
           
@@ -103,14 +103,14 @@ function getObjectByMail(){
             // console.log('the item of x ', item)
         
             // console.log(item)
-            console.log('the votings', item.votings)
+            // console.log('the votings', item.votings)
 
             const theVotings = item.votings
 
-            theVotings.forEach( item => console.log('the item email', item.email))
+            // theVotings.forEach( item => console.log('the item email', item.email))
 
             const theSearchedVotingsOfAuser = theVotings.find( item => item.email == 'kiwi_eis@tutifrutti.at')
-            console.log('the searched votings', theSearchedVotingsOfAuser)
+            // console.log('the searched votings', theSearchedVotingsOfAuser)
 
             if(theSearchedVotingsOfAuser){
               allVotesOfTheUser.push(theSearchedVotingsOfAuser)

@@ -145,9 +145,9 @@ function getTheGallery(){
         
 
         // x.forEach( item =>{
-        //   console.log('the item of x ', item)
+        //   // console.log('the item of x ', item)
       
-        //   // console.log(item.image)
+        //   // // console.log(item.image)
   
         // } )
 
@@ -159,6 +159,21 @@ function getTheGallery(){
        
         correctUsers.forEach( item =>{
           // console.log(item.image.public_location)
+
+          //find voting function
+
+            const theVotingsOfAUser = item.votings
+
+            const theSearchedVotingsOfAuser = theVotingsOfAUser.find( item => item.email == 'kiwi_eis@tutifrutti.at')
+            
+            if(theSearchedVotingsOfAuser){
+              allVotesOfTheUser.push(theSearchedVotingsOfAuser)
+            }
+
+            console.log('all votes of the user are ', allVotesOfTheUser)
+
+            allVotesOfTheUser.forEach(item => console.log('user has vote this ', item.id))
+          // ende find voting function
 
           const {
             id: theUserIdForVote, 

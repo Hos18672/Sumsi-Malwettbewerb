@@ -4,17 +4,19 @@ const englishLanguage = document.querySelectorAll('.english')
 
 let isGermanTrue = true
 
-
+console.log(germanLanguage)
+console.log(englishLanguage)
 
 // languageElement.addEventListener("click", changeTheLanguage())
 
 languageElement.forEach( (item) => {
     item.addEventListener('click', changeTheLanguage)
+    
 })
 
 
 function changeTheLanguage() {
-    console.log('hello')
+    
 
     if(isGermanTrue){
         germanLanguage.forEach ( (item) => {
