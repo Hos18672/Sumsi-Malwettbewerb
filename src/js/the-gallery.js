@@ -10,9 +10,6 @@ if(em != null){
    theMailOfTheVoter = em.email
 }
 
-
-
-
 function getTheGallery(){
 
   /**
@@ -36,7 +33,6 @@ function getTheGallery(){
   .then( response => {
     // console.log('the resoponse of post - ', response.data)
     // console.log(response.data.token)
-
     token = response.data.token
   })
   /**
