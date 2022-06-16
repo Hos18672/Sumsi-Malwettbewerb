@@ -5,11 +5,13 @@ const theGallery = document.getElementById('container-gallery')
 const allVotesOfTheUser = []
 
 let token
+let theMailOfTheVoter = ""
+let em =  JSON.parse(localStorage.getItem('User'))
 
-let 
-  mailOfStorage = localStorage.getItem('voteMail'),
-  theMailOfTheVoter = mailOfStorage,
-  voting
+if(em != null){
+   theMailOfTheVoter = em.email
+}
+
 
 
 
@@ -191,12 +193,16 @@ function getTheGallery(){
             }
           })
 
-          // console.log(a)
-          // console.log(typeof a)
-          // console.log(b)
 
-          // console.log(typeof item.dataset.imageUserid)
-          // console.log(typeof localStorage.getItem('vote1'))
+          item.addEventListener('click', ()=> {
+
+            console.log(item.dataset.imageUserid)
+
+            if(!theMailOfTheVoter){
+              const xyz = window.prompt('Bitte geben sie Ihre Email Adresse ein', 'max@muster.at')
+              console.log(xyz)
+             
+              let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
           console.log(voting)
           if(voting){
@@ -258,21 +264,9 @@ function getTheGallery(){
                     alert('Es dürfen nur 5 Bilder bewertet werden')
                     break
                 }
-  
-  
-              })// response vom click listener
-  
-  
-            }) //item eventlistener
-          }
-          
-        }) // vote buttons for each
-        
-        theModalFunction()
-        englishFunction()
-      })  // then response
-
-  })//get submissions
+            
+              // theMailOfTheVoter = xyz
+            }
 
   .catch( err => console.log(err) )
 
@@ -415,66 +409,69 @@ slideLeft.onclick = () =>{
 }
 
 
+} // function get the gallery
 
 
 
-/* -------------------------------------------------------------
-Testing AREA
---- */
-
-console.log(littleImages)
-
-littleImages.forEach( (item) => {
-    console.log(item.dataset.id)
-})
-}
+//----------------------------------------------
 
 
-function englishFunction(){
-  const languageElement = document.querySelectorAll('.change-language')
-const germanLanguage = document.querySelectorAll('.german')
-const englishLanguage = document.querySelectorAll('.english')
+function getAllVotesOfUser(){
 
-let isGermanTrue = true
-
-console.log(germanLanguage)
-console.log(englishLanguage)
-
-// languageElement.addEventListener("click", changeTheLanguage())
-
-languageElement.forEach( (item) => {
-    item.addEventListener('click', changeTheLanguage)
-    
-})
-
-
-function changeTheLanguage() {
-    
-
-    if(isGermanTrue){
-        germanLanguage.forEach ( (item) => {
-            item.style.display = 'none'
-        })
-    
-        englishLanguage.forEach ( (item) => {
-            item.style.display = 'block'
-        })
-
-        isGermanTrue = false
-    }
-    else {
-        germanLanguage.forEach ( (item) => {
-            item.style.display = 'block'
-        })
-    
-        englishLanguage.forEach ( (item) => {
-            item.style.display = 'none'
-        })
-
-        isGermanTrue = true
-    }
-
+  axios({
+    method: 'post',
+    baseURL: baseURL,
+    url: '/api/v1/login',
+    data: {
+        email: "admin@csaw.at",
+        password: "pw4sumsiadmin"
+      }
   
-}
+  })
+  .then( response => {
+    // console.log('the resoponse of post - ', response.data)
+    // console.log(response.data.token)
+    token = response.data.token
+  })
+  .then ( () => {
+    axios({
+        method: 'get',
+        baseURL: baseURL,
+        url: '/api/v1/submissions',
+        headers: {
+          'Authorization': `Bearer ${token}` 
+        }
+      })
+      .then( response => {
+      
+        let x = response.data.data
+        
+        x.forEach( item =>{
+          // console.log('the item of x ', item)
+          // console.log(item)
+          console.log('the votings', item.votings)
+
+          const theVotings = item.votings
+
+            theVotings.forEach( item => console.log('the item email', item.email))
+
+            const theVoteButtons = document.querySelectorAll('.vote-icon')
+            theVoteButtons.forEach((item) => {
+              console.log('the item email-------------')
+
+              if(item.email == 'kiwi_eis@tutifrutti.at'){
+                item.src = '../pics/star-filled.webp'
+                console.log('the item email-------------')
+              }
+            })
+  
+        } )
+      
+      })
+  })
+  .catch( err => console.log(err) )
 
 }
+
+
+getAllVotesOfUser()

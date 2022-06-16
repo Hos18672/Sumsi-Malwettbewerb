@@ -47,7 +47,6 @@ function getObjectByMail(){
          
           console.log('the searched id is ', theUserId)
   
-        
         })
     })
     .catch( err => console.log(err) )
@@ -98,10 +97,9 @@ function getObjectByMail(){
           
           let x = response.data.data
           
-  
           x.forEach( item =>{
             // console.log('the item of x ', item)
-        
+      
             // console.log(item)
             // console.log('the votings', item.votings)
 
