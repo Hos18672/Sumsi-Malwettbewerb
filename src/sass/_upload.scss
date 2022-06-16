@@ -22,6 +22,8 @@
     }
   }
   &_form_checkbox{
+    display: flex;
+    flex-direction: column;
     margin-top: -4rem;
     grid-column: 2;
     & input{
