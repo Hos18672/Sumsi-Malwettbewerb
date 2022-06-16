@@ -3,8 +3,14 @@ const baseURL = 'https://sumsi.dev.webundsoehne.com'
 const theGallery = document.getElementById('container-gallery')
 
 let token
+let theMailOfTheVoter = ""
+let em =  JSON.parse(localStorage.getItem('User'))
 
-let theMailOfTheVoter = getItem(User.email)
+if(em != null){
+   theMailOfTheVoter = em.email
+}
+
+
 
 
 function getTheGallery(){
@@ -125,16 +131,15 @@ function getTheGallery(){
 
         theVoteButtons.forEach( item => {
 
+
           item.addEventListener('click', ()=> {
-            console.log(item)
-            console.log(item.dataset)
+
             console.log(item.dataset.imageUserid)
 
             if(!theMailOfTheVoter){
               const xyz = window.prompt('Bitte geben sie Ihre Email Adresse ein', 'max@muster.at')
               console.log(xyz)
              
-
               let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
               if(xyz.match(mailformat))
@@ -147,8 +152,7 @@ function getTheGallery(){
                 alert('Sie müssen eine gültige Email Adresse eingeben')
                 return
                 }
-              
-
+            
               // theMailOfTheVoter = xyz
             }
 
@@ -201,3 +205,68 @@ function getTheGallery(){
   .catch( err => console.log(err) )
 
 } // function get the gallery
+
+
+
+//----------------------------------------------
+
+
+function getAllVotesOfUser(){
+
+  axios({
+    method: 'post',
+    baseURL: baseURL,
+    url: '/api/v1/login',
+    data: {
+        email: "admin@csaw.at",
+        password: "pw4sumsiadmin"
+      }
+  
+  })
+  .then( response => {
+    // console.log('the resoponse of post - ', response.data)
+    // console.log(response.data.token)
+    token = response.data.token
+  })
+  .then ( () => {
+    axios({
+        method: 'get',
+        baseURL: baseURL,
+        url: '/api/v1/submissions',
+        headers: {
+          'Authorization': `Bearer ${token}` 
+        }
+      })
+      .then( response => {
+      
+        let x = response.data.data
+        
+        x.forEach( item =>{
+          // console.log('the item of x ', item)
+          // console.log(item)
+          console.log('the votings', item.votings)
+
+          const theVotings = item.votings
+
+            theVotings.forEach( item => console.log('the item email', item.email))
+
+            const theVoteButtons = document.querySelectorAll('.vote-icon')
+            theVoteButtons.forEach((item) => {
+              console.log('the item email-------------')
+
+              if(item.email == 'kiwi_eis@tutifrutti.at'){
+                item.src = '../pics/star-filled.webp'
+                console.log('the item email-------------')
+              }
+            })
+  
+        } )
+      
+      })
+  })
+  .catch( err => console.log(err) )
+
+}
+
+
+getAllVotesOfUser()

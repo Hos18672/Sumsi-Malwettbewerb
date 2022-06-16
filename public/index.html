@@ -36,17 +36,17 @@
                         <img src="./pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
                     </li>
                     <li>
-                        <a target="_self"   href="#upload-container" class="navi-link german">Bilder hochladen</a>
+                        <a target="_self"   href="./documents/upload.html" class="navi-link german"  id="upload-hamburger-menu">Bilder hochladen</a>
                     </li>
                     <li>
-                        <a target="_self"  href="#upload-container" class="navi-link english" lang="en">Picture Upload</a>
+                        <a target="_self"  href="./documents/upload.html" class="navi-link english" id="upload-hamburger-menu" lang="en">Picture Upload</a>
                     </li>
                     
                     <li>
-                        <a target="_self"  href="#pictures-container" class="navi-link german">Gallerie</a>
+                        <a target="_self"  href="./documents/gallery.html" class="navi-link german">Gallerie</a>
                     </li>
                     <li>
-                        <a  target="_self" href="#pictures-container" class="navi-link english" lang="en">Gallery</a>
+                        <a  target="_self" href="./documents/gallery.html" class="navi-link english" lang="en">Gallery</a>
                     </li>
 
                     <li>
@@ -193,7 +193,7 @@
                 <button class="upload-container_button german" onclick="window.location.href = './documents/upload.html'">
                     Hier geht zum Bilder Hochladen <span> →</span>
                 </button>
-                <button class="upload-container_button english" onclick="window.location.href = './documents/upload.html'">
+                <button class="upload-container_button english" id="upload_button" onclick="window.location.href = './documents/upload.html'">
                     Click here to upload picture <span> →</span>
                 </button>
             </section>
@@ -245,7 +245,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src=".././src/js/change-language.js">   
     </script>
-    <script src=".././src/js/index.js">   
+    <script src=".././src/js/index-inital.js">   
     </script>
 </body>
 </html>
