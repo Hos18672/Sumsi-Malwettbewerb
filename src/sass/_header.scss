@@ -109,6 +109,12 @@
     
         }
 
+        // @media screen and (orientation: landscape) and (max-height: 600px) {
+            
+        //     min-width: 100vw;
+        //     min-height: 200vh;
+        //   }
+
         &_ul{
             @include flex-center-row;
             padding-right: 3rem;
@@ -198,3 +204,7 @@
 .test{
     color: tomato;
 }
+
+// .get-out-of-view{
+//     right: -100vw !important;
+// }
