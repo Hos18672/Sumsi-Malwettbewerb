@@ -7,38 +7,15 @@ const email = document.getElementById("email")
 const kindname = document.getElementById("kindname")
 const alter = document.getElementById("alter")
 const btn = document.getElementById("upload_button")
-
-
 const inputFile = document.getElementById("input-file")
-
 const datenschutz = document.getElementById("datenschutz")
 const datenschutzLabel = document.getElementById("datenschutz-label") 
-
 const teilnahmebedingungen = document.getElementById("teilnahmebedingungen")
 const teilnahmebedingungenLabel = document.getElementById("teilnahmebedingungen-label")
-
 const emailOffer = document.getElementById("email-offer")
 const emailLabel = document.getElementById("email-label") 
-
-
 const section_bild = document.getElementById("upload-section_upload_image")
-
-//---------------- English --------------------------------------
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById("lastname")
-const mail = document.getElementById("mail")
-const childName = document.getElementById("childName")
-const age = document.getElementById("age")
-
-const privacy = document.getElementById("privacy")
-const privacy_label = document.getElementById("privacy-label") 
-
-const conditions = document.getElementById("conditions")
-const conditions_label = document.getElementById("conditions-label")
-
-const mailOffer = document.getElementById("mail-offer")
-const mail_label = document.getElementById("mail-offer-label") 
-
+var lang = 1
 //--------------------------------------------------------
 const img = document.getElementById("input-file")
 
@@ -118,6 +95,7 @@ btn.addEventListener('click', (e)=>{
           })
           .then( response => {
            console.log(response)
+           window.location.href= 'erfolgreich.html'
           }).catch( err => {
             email.value = "The email is given"
             email.style.border= "4px solid red"
@@ -132,57 +110,167 @@ btn.addEventListener('click', (e)=>{
     })
 
 }); //ende event listener submit
+console.log(lang)
+function changeLanguageUpload(){
+  if(lang > 0 ){
+    vorname.placeholder = "Firstname"
+    nachname.placeholder = "Lastname"
+    kindname.placeholder = "ChildName"
+    alter.placeholder = "Age"
+    datenschutzLabel.innerText = "I consent to the processing of data in accordance with the privacy policy."
+    teilnahmebedingungenLabel.innerText ="I have read and agree to your terms and conditions."
+    emailLabel.innerText =  "I would like to be notified about your offers via email."
+    lang--
 
+  }else{
+    vorname.placeholder = "Vorname"
+    nachname.placeholder = "Nachname"
+    kindname.placeholder = "KindName"
+    alter.placeholder = "Alter"
+    datenschutzLabel.innerText = "Ich willige in die Datenverarbeitung gemäß der   Datenschutzerklärung ein."
+    teilnahmebedingungenLabel.innerText ="Ich habe Ihre Teilnahmebedingungen gelesen und stimme zu. "
+    emailLabel.innerText =  "Ich möchte über Email über Ihre Angebote benachrichtigt   werden."
+
+    lang++
+
+  }
+ // console.log(lang)
+
+}
 ///--------------------- Validirung --------------------
-
+let checked = true
 function validate() {
-    if(vorname.value === " " || vorname.value === "" || !isNaN(parseInt(vorname.value))) {
-        vorname.value = "Eingabe ist nicht zulässig"
-        vorname.style.border= "4px solid red"
-    }
-
-    else if(nachname.value === " " || nachname.value === ""  || !isNaN(nachname.value)) {
-        nachname.value = "Eingabe ist nicht zulässig"
-        nachname.style.border= "4px solid red"
-    }
-    else  if(email.value === " " || email.value === "") {
-        email.value ="Eingabe ist nicht zulässig"
-        email.style.border= "4px solid red"
-    }
-    else if(!isMail(email)){
-        email.placeholder = "pleas enter a valid email"
-        email.style.border= "4px solid red"
-        email.value = "pleas enter a valid email"
-    }
-    else if(kindname.value === " " ||  kindname.value === ""  || !isNaN(kindname.value)) {
-        kindname.value = "Eingabe ist nicht zulässig"
-        kindname.style.border= "4px solid red"
-    }
-    else if(alter.value <= 0) {
-        alter.placeholder = "Please enter a valid age"
-        alter.style.border= "4px solid red"
-    }
-    else if(img.value === null){
-        alert("Please upload a image")
-    }
-    else if(!isFileImage(img)){
-        alert("Please upload a imag in png or jpeg format")
-    }
-    else if(datenschutz.checked == false){
-        datenschutzLabel.style.color = "red"
-    }
-    else if(teilnahmebedingungen.checked == false){
-        teilnahmebedingungenLabel.style.color = "red"
-    }
-    else if(emailOffer.checked == false){
-        //emailLabel.style.color = "red"
-    }
-    else{
+    validateVorname()
+    validateNachname()
+    validateEmail()
+    validateAlter()
+    validateKindname()
+    validateImg()
+    validateCheckboxes()
+    if(validateVorname() && validateNachname() && validateEmail() && validateKindname() && validateAlter() && validateImg() && validateCheckboxes() ){
         reset()
-        window.location.href= 'erfolgreich.html'
+
+    }
+}
+///---------------------------------
+
+
+function validateVorname(){
+    if(vorname.value === " " || vorname.value === "" || !isNaN(parseInt(vorname.value))) {
+        console.log("validierung",lang)
+        if(lang <= 0){
+            vorname.value = "Invalid input"
+        }else{
+            vorname.value = "Eingabe ist nicht zulässig"
+        }
+        vorname.style.border= "4px solid red"
+        return false
+    }else{
+        return true
+    }
+}
+function validateNachname(){
+    if(nachname.value === " " || nachname.value === ""  || !isNaN(nachname.value)) {
+        if(lang <= 0){
+            nachname.value = "Invalid input"
+        }else{
+            nachname.value = "Eingabe ist nicht zulässig"
+        }
+        nachname.style.border= "4px solid red"
+        return false
+    }else{
+        return true
+    }
+}
+function validateEmail(){
+    if(email.value === " " || email.value === "" || email.value === null ) {
+        if(lang <= 0){
+            email.value = "Invalid input"
+        }else{
+            email.value = "Eingabe ist nicht zulässig"
+        }
+        email.style.border= "4px solid red"
+        return false
+
+    }else if(!isMail(email)){
+        if(lang <= 0){
+            email.value = "Invalid input for email"
+        }else{
+            email.placeholder = "Bitte geben Sie eine Valide email"
+        }
+        email.style.border= "4px solid red"
+        return false
+    }else{
+        return true
+    }
+}
+function validateKindname(){
+    if(kindname.value === " " ||  kindname.value === ""  || !isNaN(kindname.value)) {
+        if(lang <= 0){
+            kindname.value = "Invalid input for email"
+        }else{
+            kindname.value = "Eingabe ist nicht zulässig"
+        }
+  
+        kindname.style.border= "4px solid red"
+        return false
+    
+    }else{
+        return true
     }
 }
 
+function validateAlter(){
+    if(alter.value <= 0) {
+        if(lang <= 0){
+            alter.value = "Please give a valid age"
+        }else{
+            alter.placeholder = "Bitte geben Sie ein valide Alter"
+        }
+
+        alter.style.border= "4px solid red"
+        return false
+    }else{
+        return true
+    }
+}
+
+function validateImg(){
+    if(!isFileImage(img) || img == null){
+        if(lang <= 0){   
+            alert("Please upload a picture in format png or jpeg")
+        }else{
+             
+            alert("Bitte laden Sie ein Bild  in format png oder jpeg hoch")
+        }
+
+        return false
+    }else{
+        return true
+    }
+}
+
+function validateCheckboxes(){
+    if(datenschutz.checked == false){
+        datenschutzLabel.style.color = "red"
+        return false
+    }else  if(teilnahmebedingungen.checked == false){
+        teilnahmebedingungenLabel.style.color = "red"
+        return false
+    }else if(emailOffer.checked == false){
+        emailLabel.style.color = "red"
+        return false
+    }else{
+        return true
+    }
+}
+
+
+
+
+//////////////////////////////////////
+
+///----------------------------------
 
 function isMail(email){
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -191,12 +279,15 @@ function isMail(email){
 
 function isFileImage(file) {
     var allowedType =/(\.jpg|\.jpeg|\.png)$/i
-    return allowedType.exec(file.value)
+    if(file !==null){
+        return allowedType.exec(file.value)
+    }else{
+        console.log("Image file is null")
+    }
+
 }
 
-btn.addEventListener("click", () => {
-    validate()
-})
+
 
 const imgFile = document.getElementById("upload-img-file")
 inputFile.onchange = evt => {
@@ -229,28 +320,4 @@ function reset(){
 }
 
 ///--------------------- End Validirung --------------------
-let lang = 1
-console.log(lang)
-function changeLanguageUpload(){
-  if(lang > 0 ){
-    vorname.placeholder = "Firstname"
-    nachname.placeholder = "Lastname"
-    kindname.placeholder = "ChildName"
-    alter.placeholder = "Age"
-    datenschutzLabel.innerText = "I consent to the processing of data in accordance with the privacy policy."
-    teilnahmebedingungenLabel.innerText ="I have read and agree to your terms and conditions."
-    emailLabel.innerText =  "I would like to be notified about your offers via email."
-    lang--
-  }else{
-    vorname.placeholder = "Vorname"
-    nachname.placeholder = "Nachname"
-    kindname.placeholder = "KindName"
-    alter.placeholder = "Alter"
-    datenschutzLabel.innerText = "Ich willige in die Datenverarbeitung gemäß der   Datenschutzerklärung ein."
-     teilnahmebedingungenLabel.innerText ="Ich habe Ihre Teilnahmebedingungen gelesen und stimme zu. "
-     emailLabel.innerText =  "Ich möchte über Email über Ihre Angebote benachrichtigt   werden."
-    lang++
-  }
- // console.log(lang)
 
-}
