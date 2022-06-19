@@ -1,6 +1,8 @@
 const uploadContainer = document.getElementById("upload-container");
 
-const menu = document.getElementById("upload-hamburger-menu")
+const menuDE = document.getElementById("upload-hamburger-menu")
+const menuEN = document.getElementById("upload-hamburger-menu-en")
+
 const url = "https://sumsi.dev.webundsoehne.com/api/v1/login"
 const geturl = new URL("https://sumsi.dev.webundsoehne.com/api/v1/settings");
 
@@ -20,10 +22,17 @@ function get(){
           //  subOpen.innerText =  res.data.data.submission_open
             if(res.data.data.submission_open){
                 uploadContainer.style.display = 'flex'
-                menu.style.display="block"
+                menuDE.style.visibility="visible"
+                menuEN.style.visibility="visible"
                 return 
-            }{
-                menu.style.display="none"
+            }
+            else{
+                menuDE.style.position="absolute"
+                menuEN.style.position="absolute"
+                menuDE.style.right="-500vw"
+                menuEN.style.right="-500vw"
+                menuDE.style.visibility="hidden"
+                menuEN.style.visibility="hidden"
                 uploadContainer.style.display = 'none'
             }
         })

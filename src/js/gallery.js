@@ -2,6 +2,10 @@ const baseURL = 'https://sumsi.dev.webundsoehne.com'
 
 const theGallery = document.getElementById('container-gallery')
 
+const uploadSection = document.querySelectorAll('[data-upload]')
+
+const showResponse = document.getElementById('show-response')
+
 const allVotesOfTheUser = []
 
 let token
@@ -54,6 +58,14 @@ function getTheGallery(){
 
     .then( (resp) => {
       voting = resp.data.data.voting_open
+
+      if(voting){
+        // alert ('voting is open')
+        uploadSection.forEach( item => item.style.visibility = 'hidden')
+        uploadSection.forEach( item => item.style.position = 'absolute')
+        uploadSection.forEach( item => item.style.left = '-500vw')
+      }
+
     })
   })
      
@@ -251,11 +263,39 @@ function getTheGallery(){
                     break
   
                   case "Only 1 vote per image allowed.":
-                    alert('Es ist nur 1 Vote pro Bild erlaubt')
+                    // alert('Es ist nur 1 Vote pro Bild erlaubt')
+                    showResponse.style.top = '0'
+                    if(localStorage.getItem('language') == 'german'){
+                      showResponse.innerHTML =
+                      `<p>Es ist nur 1 Vote pro Bild erlaubt!</p>`
+                    }
+                    else{
+                      showResponse.innerHTML =
+                      `<p>Only 1 vote per image allowed!</p>`
+                    }
+                   
+                    
+                    setTimeout( () => {
+                      showResponse.style.top = '-100vh'
+                    }, 3000)
                     break
   
                   case "Only 5 votes per user allowed." :
-                    alert('Es dürfen nur 5 Bilder bewertet werden')
+                    // alert('Es dürfen nur 5 Bilder bewertet werden')
+                    showResponse.style.top = '0'
+                    if(localStorage.getItem('language') == 'german'){
+                      showResponse.innerHTML =
+                      `<p>Es dürfen nur 5 Bilder bewertet werden!</p>`
+                    }
+                    else{
+                      showResponse.innerHTML =
+                      `<p>Only 5 votes per user allowed!</p>`
+                    }
+                   
+                    
+                    setTimeout( () => {
+                      showResponse.style.top = '-100vh'
+                    }, 3000)
                     break
                 }
   
@@ -422,7 +462,7 @@ slideLeft.onclick = () =>{
 Testing AREA
 --- */
 
-console.log(littleImages)
+// console.log(littleImages)
 
 littleImages.forEach( (item) => {
     console.log(item.dataset.id)
@@ -437,8 +477,8 @@ const englishLanguage = document.querySelectorAll('.english')
 
 let isGermanTrue = true
 
-console.log(germanLanguage)
-console.log(englishLanguage)
+// console.log(germanLanguage)
+// console.log(englishLanguage)
 
 // languageElement.addEventListener("click", changeTheLanguage())
 
