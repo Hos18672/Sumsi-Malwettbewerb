@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiffeisen Sumsi Malwettbewerb - Gallerie</title>
+    <meta name="description" content="Bildergallerie des Raiffeisen Sumsi Malwettbewerb">
+    <link rel="stylesheet" href="../css/gallery.css">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" href="../logo-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../logo-96.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="../logo-180.png">
+
+    <meta name="theme-color" content="#FFEC00">
+</head>
+
+<body onload="getTheGallery()">
+    <div class="container-for-all">
+    
+        <header class="header">
+            <a href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
+                <img src="../pics/bank-logo.svg" alt="Logo der Raiffeisen Bank" class="header_bank-logo">
+            </a>
+
+            <h1 class="header_main-heading">Der Sumsi Malwettbewerb der Raiffeisen Bank</h1>
+
+            <input type="checkbox" class="header_hamburger-check" id="hamburger-check">
+            <label for="hamburger-check" class="header_button" id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="make-it-darker"></div>
+
+            <nav class="header_nav" id="header_nav">
+                <ul class="header_nav_ul">
+                    <li>
+                        <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
+                    </li>
+                    <li>
+                        <a target="_self" href="../index.html" class="navi-link german" target="_blank" data-start-section>Startseite</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="../index.html" class="navi-link english" lang="en" target="_blank" 
+                        data-start-section>Start Page</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link german" target="_blank" data-upload>Bilder hochladen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link english" lang="en" target="_blank" data-upload>Picture Upload</a>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="../index.html#footer" class="navi-link german" target="_blank">Kontakt</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="../index.html#footer" class="navi-link english" lang="en" target="_blank">Contact</a>
+                    </li>
+                    
+                    <li>
+                        <span class="navi-link german change-language" lang="en">English</span>
+                    </li>
+                    <li>
+                        <span class="navi-link english change-language" lang="de">Deutsch</span>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="../index.html" target="_blank">
+                            <img src="../pics/icon_home.webp" alt="Home Icon" class="home-button">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="show-response" id="show-response">
+                <p>Sie dürfen nur 5 votes abgeben!</p>
+                <!-- <button onclick="closeTheResponse()">X</button> -->
+            </div> 
+            <div class="container-gallery" id="container-gallery">
+                
+
+            </div><!-- ende container gallery-->
+        </main>
+
+
+
+        <div class="modal" id="modal">
+            <div class="modal_dialog" id="modal_dialog">
+
+                <div class="modal_dialog_header">
+                    <button class="modal_close-modal" id="modal_close-modal">
+                        <img src="../pics/close-yellow.svg" alt="the close symbol">
+                    </button>
+                </div>
+
+                <div class="modal_dialog_main">
+
+                    <img class="big-img" id="big-img" alt="ein gemaltes Bild">
+
+                    <img src="../pics/angel-left-gray.svg" alt="symbol to slide left" class="modal_slide-left" id="slide-left">
+                    <img src="../pics/angel-right-gray.svg" alt="symbol to slide left" class="modal_slide-right" id="slide-right">
+                </div>
+
+
+            </div>
+        </div>
+
+    </div><!-- ende container for all-->
+   
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../src/js/gallery.js"></script>
+
+    <script src="../../src/js/change-language.js">   
+    </script>
+
+    <script src="../../src/js/close-the-hamburger.js">   
+    </script>
+
+</body>
+</html>
