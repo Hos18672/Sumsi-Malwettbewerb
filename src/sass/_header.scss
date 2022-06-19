@@ -56,8 +56,8 @@
            width: 2.8rem;
            height: 2.8rem;
            z-index: 10;
-
-           &:hover span{
+           overflow-y: scroll;
+           &:hover  span{
             width: 100%;
         }
 
@@ -65,13 +65,11 @@
             width: 2rem;
             height: 2rem;
         }
-
         // &:hover span:nth-of-type(2){
         //     width: 60%;
         // }
 
         }
-
         & span{
             @media screen and (max-width: 1279px) {
                height: 0.3rem;
@@ -98,6 +96,7 @@
             position: fixed;
             top: 0;
             right: -130%;
+            overflow-y: scroll;
             background-color: $color-bank-yellow;
             padding-top: 4rem;
             transition: right 0.8s;
