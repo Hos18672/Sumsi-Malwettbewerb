@@ -44,8 +44,6 @@
 
     &_button{
         display: none;
-        
-
         @media screen and (max-width: 1279px) {
             all: initial;
            @include flex-center-column;
@@ -56,7 +54,6 @@
            width: 2.8rem;
            height: 2.8rem;
            z-index: 10;
-           overflow-y: scroll;
            &:hover  span{
             width: 100%;
         }
