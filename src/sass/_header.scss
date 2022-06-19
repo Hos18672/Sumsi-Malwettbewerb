@@ -65,13 +65,11 @@
             width: 2rem;
             height: 2rem;
         }
-
         // &:hover span:nth-of-type(2){
         //     width: 60%;
         // }
 
         }
-
         & span{
             @media screen and (max-width: 1279px) {
                height: 0.3rem;
