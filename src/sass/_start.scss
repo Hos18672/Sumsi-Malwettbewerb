@@ -1,0 +1,389 @@
+body{
+    margin: 0;
+    padding:0;
+}
+main{
+    font-family:  $font-main;
+    margin: 0;
+    padding:0;
+}
+section{
+    min-height:100vh;
+
+}
+
+
+
+
+
+
+.start-container{
+    @include flex-right-row;
+    @include setBackground(url(../../pictures/fotos/child-background.jpg), cover, bottom );
+    &_logo-cool{
+        height: 200px;
+        width: 550px;
+        margin-right: 20px;
+        @media screen and (max-width:$Tablet-size){
+            height: 120px;
+            width: 370px;
+        }
+        @media screen and (max-width: $Smartphone-size){
+            height: 100px;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: 10px;
+            transform: rotate(-10deg);
+        }
+    }
+
+    @media screen and (max-width: $Smartphone-size){
+        @include flex-left-row;
+    }
+}
+
+.welcome-container{
+    background-color: $color-bank-yellow;
+    @include flex-box(column, nowrap, flex-start, center, center);
+    padding: 2rem;
+
+    &_col-one{
+        padding:100px;
+        @media screen and (max-width:$Tablet-size){
+            display: none;
+        }
+        & img{
+            height: 20vw;
+            transition: .5s;
+        }
+
+    }
+    &_col-two{
+        @include flex-box(column,nowrap, center, left, center);
+        // @include testing-border();
+        & h1{
+            max-width: 400px;
+            margin: 0 20px;
+            @media screen and (max-width:$Smartphone-size){
+                font-size: $font-size-20;
+            }
+        }
+        & img{
+            height: 25vw;
+            display: none;
+            transition: .5s;
+            margin-bottom: 30px;
+            @media screen and (max-width:$Tablet-size){
+                display: inline;
+            }
+        }
+        & p{
+            max-width: 600px;
+            font-size: $font-size-20;
+            padding: 20px;
+            @media screen and (max-width:$Smartphone-size){
+                font-size: $font-size-15;
+            }
+        }
+
+        @media screen and (max-width:$Tablet-size){
+            @include flex-box(column,nowrap, center, center, center);
+            // text-align: center;
+            text-align: left;
+        }
+    }
+}
+
+.info-container{
+    height: fit-content;
+    @include flex-box(row,nowrap, center, center, center);
+    & ul{
+        @include flex-box(column,nowrap, center, center, center);
+        text-align: center;
+        padding: 0 20px;
+        & h1{
+            max-width: 420px;
+
+            @media  only screen and (max-width: 600px){
+                font-size: $font-size-20;
+            }
+        }
+        & li{
+            padding: 0 10px;
+            text-align: left;
+            @include flex-box(row,nowrap, center, center, center);
+            max-width: 800px;
+            margin: 30px 0 ;
+            & img{
+                height:150px;
+                margin: 0 50px;
+            }
+            & .description-container{
+                padding: 0 10px;
+                min-height: 130px;
+                height: fit-content;
+                & h1{
+                    font-size: $font-size-18;
+                }
+                
+                @media  only screen and (max-width: 600px){
+                    font-size: $font-size-15;
+                }
+            
+            }
+
+            & .desc-one{
+                background-color: $color-red ;
+            }
+            & .desc-two{
+                background-color: $color-blue ;
+            } 
+                & .desc-three{
+                background-color: $color-bank-yellow ;
+            }    
+             & .desc-four{
+                background-color: $color-hell-green ;
+            }
+
+            @media  only screen and (max-width: 600px){
+                & .description-container{
+                    margin-top: 20px;
+                }
+                @include flex-box(column,nowrap, center, center, center);
+                & img{
+                    margin-bottom: 10px;
+                }
+                & .desc-two{
+                   transform: translateY(150px)
+                } 
+                & .img-two{
+                    transform: translateY(-170px)
+                }
+                & .desc-four{
+                    transform: translateY(130px)
+                 } 
+                 & .img-four{
+                     transform: translateY(-170px)
+                 }
+            }
+        }
+    }
+    @media  only screen and (max-width: $Tablet-size){
+        height: fit-content
+    }
+}
+
+.info-container-two{
+    height: fit-content;
+    background-color: $color-hell-gray;
+    padding-bottom: 40px;
+    @include flex-box(column,nowrap, center, center, center);
+    & img{
+       width:600px;
+       margin: 60px 10px;
+       
+        @media screen and (max-width:$Tablet-size){
+            width:400px;
+        }
+        @media screen and (max-width:$Smartphone-size){
+            width:300px;
+        }
+    }
+    &_description-container{
+        background-color: $color-bank-yellow; 
+        margin: 20px;
+        padding: 50px;
+        font-size: $font-size-25;
+        border-radius: 30px;
+        & .info-two-list{
+            & li{
+                margin-left: 30px;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    margin-left: -30px;
+                    margin-top: 10px;
+                    border-radius: 50%;
+                    background-color:black;
+                }
+            }
+        }
+
+        @media screen and (max-width:$Tablet-size){
+            font-size: $font-size-20;
+        }
+        @media screen and (max-width:$Smartphone-size){
+            font-size: $font-size-15;
+        }
+    }
+}
+
+.upload-container{
+    @include flex-box(column,nowrap, center, left, center);
+    @include setBackground(url(../../pictures/fotos/colourful-pencils-background.jpg), cover, bottom );
+    & .english{
+    
+        display:none;
+    }
+    
+    &_button {
+        cursor: pointer;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        border-style: none;
+        height: 60px;
+        width: 350px;
+        font-family: $font-main;
+        color: $color-white;
+        font-size: $font-size-20;
+        background-color: $color-red;
+        border-radius: 10px;
+        margin-left: 10%;
+        margin-top: 200px;
+        @media screen and (max-width:$Tablet-size){
+            margin-top: 200px;
+        
+        }
+        @media screen and (max-width:$Smartphone-size){
+            margin-top: 200px;
+            height: 50px;
+            width: 300px;
+            font-size: $font-size-18;
+        }
+    }
+
+
+    
+}
+
+.pictures-container{
+    @include flex-box(column,nowrap, center, center, center);
+    @include setBackground(url(../../pictures/fotos/robot.png), cover,  center);
+    & .english{ 
+        display:none;
+    }
+    
+    &_button{
+        cursor: pointer;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        border-style: none;
+        height: 60px;
+        width: 350px;
+        font-family: $font-main;
+        color: $color-white;
+        font-size: $font-size-20;
+        background-color: $color-red;
+        border-radius: 10px;
+        margin-left: 60%;
+        margin-right: 20px;
+        margin-top: 300px;
+        @media screen and (max-width:$Tablet-size){
+            margin-left: 10%;
+            margin-top: 300px;
+        
+        }
+        @media screen and (max-width:$Smartphone-size){
+            margin-left: 10px;
+            margin-top: 200px;
+            height: 50px;
+            width: 300px;
+            font-size: $font-size-18;
+        }
+    }
+}
+.footer{
+    @include flex-box(row,wrap, space-between, center, center);
+    height: fit-content;
+    background-color: $color-bank-yellow;
+    margin: -20px 0;
+    padding: 100px 10%;
+    z-index: 11;
+
+    &_col-one{
+        transform: translateY(-35px);
+        & ul{
+            width: fit-content;
+            max-width:500px;
+            & li{
+                line-height: 40px;
+                & span {
+                    & img{
+                        margin-right: 10px;
+                        transform: translateY(5px)
+                    }
+                }
+
+                & a{
+                    all: inherit;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+        }
+      
+    }
+    &_col-two{
+        & ul{
+            width: 300px;
+            & li{
+                transform: translateX(30px);
+                line-height: 40px;
+       
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    margin-left: -20px;
+                    margin-top: 15px;
+                    border-radius: 50%;
+                    background-color:black;
+                }
+                & a{
+                    font-family: $font-main;
+                    cursor: pointer;
+                }
+                & .datenschutz-link{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &_col-three{
+        transform: translateY(-100px);
+        & ul{
+            width: 300px;
+            & li{
+                line-height: 40px;
+                & span {
+                    & img{
+                        margin-right: 10px;
+                        transform: translateY(5px)
+
+                    }
+                }
+
+                & a{
+                    all: inherit;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        @media screen and (max-width:768px){
+            transform: translateY(-10px);
+        }
+    }
+
+    @media screen and (max-width:$Tablet-size){
+        & h1{
+            font-size: $font-size-20;
+        }
+    }
+}

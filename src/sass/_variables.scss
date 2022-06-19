@@ -1,0 +1,67 @@
+/*---------------------------------------------------------------------------
+Font
+---------------------------*/
+
+@font-face {
+    font-family: raiffeisen;
+    src: 
+        url(../../src/font/swz721b-webfont.woff),
+        url(../../src/font/swz721b-webfont.woff2);
+}
+
+@font-face {
+    font-family: main-font;
+    src: 
+        url(../../src/font/roboto-regular-webfont.woff),
+        url(../../src/font/roboto-regular-webfont.woff2);
+}
+
+@font-face {
+    font-family: indie;
+    src: 
+        url(../../src/font/indieflower-regular-webfont.woff),
+        url(../../src/font/indieflower-regular-webfont.woff2);
+}
+
+
+/* ---------------------------------------------------------------------------
+Variables
+-----------------------*/
+
+
+
+// font
+
+    $font-raiffeisen: raiffeisen, sans-serif;
+    $font-main: main-font, sans-serif;
+    $font-second: indie, serif;
+
+
+// color
+
+    $color-bank-yellow: #FFEC00;
+    $color-red: #FD432A;
+    $color-blue: #33A1FD;
+    $color-hell-green: #1AFFD5;
+    $color-hell-gray: #F0F0F0;
+    $color-white: #ffffff;
+    $color-green:rgb(61, 192, 61);
+
+// font-sizes
+
+    $font-size-10 : 10px;
+    $font-size-15 : 15px;
+    $font-size-18 : 18px;
+    $font-size-20 : 20px;
+    $font-size-25 : 25px;
+    $font-size-30 : 30px;
+    $font-size-35 : 35px;
+    $font-size-40 : 40px;
+    $font-size-45 : 45px;
+    $font-size-50 : 50px;
+
+
+// media sizes
+
+    $Tablet-size: 850px; 
+    $Smartphone-size: 400px; 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raiffeisen Sumsi Malwettbewerb</title>
+    <meta name="description" content="Alles zum großen Raiffeisen Malwettbewerb 2022"/>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="icon" type="image/png" href="../logo-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../logo-96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../logo-180.png" />
+    <meta name="theme-color" content="#FFEC00" />
+  </head>
+  <body  class="upload-body">
+    <div class="container">
+      <header class="header">
+        <a href="https://www.raiffeisen.at/de/privatkunden.html" rel="external no-opener" class="header_bank-link">
+            <img src="../pics/bank-logo.svg" alt="Logo der Raiffeisen Bank" class="header_bank-logo">
+        </a>
+
+        <h1 class="header_main-heading">Der Sumsi Malwettbewerb der Raiffeisen Bank</h1>
+
+        <input type="checkbox" class="header_hamburger-check" id="hamburger-check">
+        <label for="hamburger-check" class="header_button" id="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="make-it-darker"></div>
+
+        <nav class="header_nav">
+            <ul class="header_nav_ul">
+                <li>
+                    <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
+                </li>
+                <li>
+                  <a target="_self" href="../index.html" class="navi-link german" target="_blank" data-start-section>Startseite</a>
+              </li>
+              <li>
+                  <a target="_self" href="../index.html" class="navi-link english" lang="en" target="_blank" 
+                  data-start-section>Start Page</a>
+              </li>
+                
+                <li>
+                    <a target="_self"  href="gallery.html" class="navi-link german" target="_blank">Bilder anzeigen</a>
+                </li>
+                <li>
+                    <a target="_self" href="gallery.html" class="navi-link english" lang="en" target="_blank">Show pictures</a>
+                </li>
+                <li>
+                  <a target="_self" href="../index.html#footer" class="navi-link german" target="_blank">Kontakt</a>
+                </li>
+                <li>
+                    <a target="_self" href="../index.html#footer" class="navi-link english" lang="en" target="_blank">Contact</a>
+                </li>
+                
+                <li>
+                    <span class="navi-link german change-language" onclick="changeLanguageUpload()"  lang="en">English</span>
+                </li>
+                <li>
+                    <span class="navi-link english change-language" onclick="changeLanguageUpload()" lang="de">Deutsch</span>
+                </li>
+                <li>
+                    <a target="_self" href="../index.html" target="_blank">
+                        <img src="../pics/icon_home.webp" alt="Home Icon" class="home-button">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <section class="upload-section">
+          <!-- --------------------- From container--------------------- -->
+          <div class="upload-section_form">
+            <h1 class="upload_header german" >Lade deine Zeichnung hoch</h1>
+            <h1 class="upload_header english">Upload your drawing</h1>
+            <form action="" id="upload_form" method="get">
+              <div class="form_table">
+                <input   type="text"   id="vorname"   name="legalguardian_firstname"   placeholder="Vorname"   required class="g">
+
+                <input  type="text"  id="nachname"  name="legalguardian_lastname"  placeholder="Nachname"  required class="nachname g">
+
+                <input   type="email"   id="email"   name="email"   placeholder="Email"   required class="g">
+
+
+                <input   type="text"   id="kindname"   name="child_firstname"   placeholder="Kindname"   required class="g">
+
+
+                <input   type="text"   id="alter"   name="child_age"   placeholder="Alter"   required class="g">
+
+              </div>
+            </form>    
+          </div>  
+           <!-- ---------------------Checkbox container--------------------- -->
+          <div class="upload-section_form_checkbox">
+            <input  type="checkbox" class="g"   id="datenschutz"    name="approval_privacypolicy">
+            <label for="datenschutz" id="datenschutz-label" class="g">Ich willige in die Datenverarbeitung gemäß der   Datenschutzerklärung ein. </label >
+
+    
+
+            <input   type="checkbox"  class="g" id="teilnahmebedingungen"   name="approval_participation">
+            <label for="teilnahmebedingungen" id="teilnahmebedingungen-label" class="g" >ich habe Ihre Teilnahmebedingungen gelesen und stimme zu. </label >
+
+
+            <input  type="checkbox" class="g"  id="email-offer"  name="approval_mailnotification">
+            <label for="email-offer" id="email-label" class="g">ich möchte über Email über Ihre Angebote benachrichtigt   werden.</label >
+
+          </div>  
+          <!-- --------------------- Checkbox container--------------------- -->
+          <div class="upload-section_upload_image" id="section_upload_image">
+              <input  type="file" class=" upload_img" id="input-file"  name="image">
+              <label id="upload-img-file" class=" upload-img-file" for="input-file"> <img id="blah" src="#" alt="your image" /></label >
+          </div>  
+          <!-- --------------------- Button---------------------        -->
+          <button type="button" id="upload_button">
+            Upload
+          </button>
+          <div class="test"> </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../src/js/change-language.js"></script>
+    <script src="../../src/js/upload.js"></script>
+    <script src="../../src/js/close-the-hamburger.js">   
+    </script>
+  </body>
+</html>
