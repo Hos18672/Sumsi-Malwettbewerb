@@ -35,16 +35,23 @@
 
             <div class="make-it-darker"></div>
 
-            <nav class="header_nav">
+            <nav class="header_nav" id="header_nav">
                 <ul class="header_nav_ul">
                     <li>
                         <img src="../pics/sumsi-erfreut.svg" alt="fliegende Sumsi" class="nav-logo">
                     </li>
                     <li>
-                        <a target="_self" href="upload.html" class="navi-link german" target="_blank">Bilder hochladen</a>
+                        <a target="_self" href="../index.html" class="navi-link german" target="_blank" data-start-section>Startseite</a>
                     </li>
                     <li>
-                        <a target="_self" href="upload.html" class="navi-link english" lang="en" target="_blank">Picture Upload</a>
+                        <a target="_self" href="../index.html" class="navi-link english" lang="en" target="_blank" 
+                        data-start-section>Start Page</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link german" target="_blank" data-upload>Bilder hochladen</a>
+                    </li>
+                    <li>
+                        <a target="_self" href="upload.html" class="navi-link english" lang="en" target="_blank" data-upload>Picture Upload</a>
                     </li>
                     
                     <li>
@@ -71,6 +78,10 @@
         </header>
 
         <main>
+            <div class="show-response" id="show-response">
+                <p>Sie dürfen nur 5 votes abgeben!</p>
+                <!-- <button onclick="closeTheResponse()">X</button> -->
+            </div> 
             <div class="container-gallery" id="container-gallery">
                 
 
@@ -101,16 +112,14 @@
         </div>
 
     </div><!-- ende container for all-->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../../src/js/change-language.js">  </script>
-
-
-    
-
+   
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../../src/js/gallery.js"></script>
 
     <script src="../../src/js/change-language.js">   
+    </script>
+
+    <script src="../../src/js/close-the-hamburger.js">   
     </script>
 
 </body>
