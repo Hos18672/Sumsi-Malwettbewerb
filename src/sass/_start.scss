@@ -15,7 +15,7 @@ section{
 
 .start-container{
     @include flex-right-row;
-    @include setBackground(url(../../pictures/fotos/child-background.jpg), cover, bottom );
+    @include setBackground(url(../../pictures/fotos/childBackground.jpg), cover, bottom );
     &_logo-cool{
         height: 200px;
         width: 550px;
