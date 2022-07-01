@@ -58,7 +58,7 @@
         cursor: pointer;
           width: 90px;
           height: 90px;
-          @include setBackground( url(../../public/pics/iconUpload.png),cover, center)
+          @include setBackground( url('https://github.com/Hos18672/Sumsi-Malwettbewerb/blob/reza/public/pics/iconUpload.png?raw=true'),cover, center)
       }
   }
 

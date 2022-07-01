@@ -15,7 +15,7 @@ section{
 
 .start-container{
     @include flex-right-row;
-    @include setBackground(url(../../pictures/fotos/childBackground.jpg), cover, bottom );
+    @include setBackground(url('https://github.com/Hos18672/Sumsi-Malwettbewerb/blob/main/pictures/fotos/childBackground.jpg?raw=true'), cover, bottom );
     &_logo-cool{
         height: 200px;
         width: 550px;
@@ -216,7 +216,7 @@ section{
 
 .upload-container{
     @include flex-box(column,nowrap, center, left, center);
-    @include setBackground(url(../../pictures/fotos/colourful-pencils-background.jpg), cover, bottom );
+    @include setBackground(url('https://github.com/Hos18672/Sumsi-Malwettbewerb/blob/main/pictures/fotos/colourfulPencilsBackground.jpg?raw=true'), cover, bottom );
     & .english{
     
         display:none;
@@ -255,7 +255,7 @@ section{
 
 .pictures-container{
     @include flex-box(column,nowrap, center, center, center);
-    @include setBackground(url(../../pictures/fotos/robot.png), cover,  center);
+    @include setBackground(url('https://github.com/Hos18672/Sumsi-Malwettbewerb/blob/main/pictures/fotos/robot.png?raw=true'), cover,  center);
     & .english{ 
         display:none;
     }
