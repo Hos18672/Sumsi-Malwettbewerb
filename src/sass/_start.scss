@@ -8,9 +8,9 @@ main{
     padding:0;
 }
 section{
-    height:100vh;
-}
+    min-height:100vh;
 
+}
 
 
 .start-container{
@@ -32,15 +32,14 @@ section{
             transform: rotate(-10deg);
         }
     }
-
     @media screen and (max-width: $Smartphone-size){
         @include flex-left-row;
     }
 }
-
 .welcome-container{
     background-color: $color-bank-yellow;
-    @include flex-box(row,nowrap, center, center, center);
+    @include flex-box(column, nowrap, flex-start, center, center);
+    padding: 2rem;
 
     &_col-one{
         padding:100px;
@@ -55,6 +54,7 @@ section{
     }
     &_col-two{
         @include flex-box(column,nowrap, center, left, center);
+        // @include testing-border();
         & h1{
             max-width: 400px;
             margin: 0 20px;
@@ -82,7 +82,8 @@ section{
 
         @media screen and (max-width:$Tablet-size){
             @include flex-box(column,nowrap, center, center, center);
-            text-align: center;
+            // text-align: center;
+            text-align: left;
         }
     }
 }
@@ -310,6 +311,12 @@ section{
                         transform: translateY(5px)
                     }
                 }
+
+                & a{
+                    all: inherit;
+                    display: inline-block;
+                    cursor: pointer;
+                }
             }
         }
       
@@ -353,6 +360,12 @@ section{
                         transform: translateY(5px)
 
                     }
+                }
+
+                & a{
+                    all: inherit;
+                    display: inline-block;
+                    cursor: pointer;
                 }
             }
         }

@@ -8,7 +8,7 @@
     <meta name="description" content="Alles zum großen Raiffeisen Malwettbewerb 2022">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" href="../logo-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href=".../logo-32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../logo-96.png" sizes="96x96">
     <link rel="apple-touch-icon" sizes="180x180" href="../logo-180.png">
     <meta name="theme-color" content="#FFEC00">
@@ -39,7 +39,7 @@
                         <a target="_self"   href="./documents/upload.html" class="navi-link german"  id="upload-hamburger-menu">Bilder hochladen</a>
                     </li>
                     <li>
-                        <a target="_self"  href="./documents/upload.html" class="navi-link english" id="upload-hamburger-menu" lang="en">Picture Upload</a>
+                        <a target="_self"  href="./documents/upload.html" class="navi-link english" id="upload-hamburger-menu-en" lang="en">Picture Upload</a>
                     </li>
                     
                     <li>
@@ -213,8 +213,14 @@
                         <h1 class=" german">KONTAKT</h1>
                         <h1 class=" english">CONTACT</h1>
                         <li><span><img src="../pictures/Icons/location.svg" alt="location"></span>Raiffeisen Landesbank Kärnten, Raiffeisenplatz 19020 Klagenfurt am WörtherseeT</li>
-                        <li><span><img src="../pictures/Icons/phone.svg" alt="location"></span>+43 463 993 00</li>
-                        <li><span><img src="../pictures/Icons/email.svg" alt="location"></span>info@rbgk.raiffeisen.at</li>
+                        <li>
+                            <span><img src="../pictures/Icons/phone.svg" alt="location"></span>
+                            <a href="tel:+4346399300">+43 463 993 00</a>
+                        </li>
+                        <li>
+                            <span><img src="../pictures/Icons/email.svg" alt="location"></span>
+                            <a href="mailto:info@rbgk.raiffeisen.at">info@rbgk.raiffeisen.at</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer_col-two">
@@ -235,7 +241,10 @@
                 <div class="footer_col-three">
                     <ul>
                         <h1>SOCIAL MEDIA</h1>
-                        <li><span><img src="../pictures/Icons/facebook.svg" alt="location"></span>Facebook</li>
+                        <li>
+                            <span><img src="../pictures/Icons/facebook.svg" alt="location"></span>
+                            <a href="https://www.facebook.com/RaiffeisenKaernten/" rel="external noopener noreferrer">Facebook</a>
+                        </li>
                     </ul>
                 </div>
             </footer>
@@ -246,6 +255,8 @@
     <script src=".././src/js/change-language.js">   
     </script>
     <script src=".././src/js/index-inital.js">   
+    </script>
+    <script src=".././src/js/close-the-hamburger.js">   
     </script>
 </body>
 </html>

@@ -34,7 +34,6 @@
     padding: 0.5rem;
     margin: 0.5rem;
     flex-shrink: 0;
-
     // &:hover{
     //     box-shadow: 0 0px 10px $color-bank-yellow;
     //  }
@@ -46,12 +45,12 @@
 
     @media screen and (max-width: 1000px) {
         width: 35%;
-        margin: 0rem;
+        margin: 1rem;
     }
 
     @media screen and (max-width: 800px) {
         width: 41%;
-        margin: 0rem;
+        margin: 1rem;
     }
 
     @media screen and (max-width: 600px) {
@@ -166,6 +165,35 @@
     }
 }
 
+.show-response{
+    width: 100%;
+    min-height: 15vh;
+    position: fixed;
+    top: -100vh;
+    transition: top 0.3s;
+    left: 0;
+    // background-color: #fff;
+    // color: tomato;
+    background-color: $color-bank-yellow;
+    // background-color: tomato;
+    z-index: 20;
+    box-shadow: 3px 5px 6px rgba(0,0,0,0.3);
+    border-radius: 0 0 5rem 5rem;
+    @include flex-center-row();
+
+    font-size: 1.2rem;
+    font-family: $font-main;
+
+    & button{
+        all: initial;
+        width: 3rem;
+        height: 3rem;
+        @include flex-center-row();
+        border-radius: 50%;
+        border: 1px solid #000;
+    }
+}
+
 
 
 .modal{
@@ -259,5 +287,13 @@
         // @media screen and (max-width: 1020px){
         //     left: calc(50% + 3rem);
         //  }
+    }
+}
+
+.navi-link[data-start-section]{
+   visibility: hidden;
+
+    @media screen and (max-width: 1279px) {
+        visibility: visible;
     }
 }
